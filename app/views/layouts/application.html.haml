@@ -30,13 +30,38 @@
             %h1 Default.
     %p.flash
       = flash.notice
-    .container
-      %content
-        = yield
-        %hr
-        %h6
-          - if logged_in?
-            = "Logged in as #{current_user.email}"
-            = link_to "(logout)", logout_path
-          - else
-            = link_to "(login)", login_path
+    %content
+      = yield
+    %section#contact
+      #contact.container
+        %h1.section-title Contact
+        %ul
+          %li.linkedin.col-md-4.col-md-offset-1
+            %a{:href => '#'} http://linkedin.com/in/derekkeith
+          %li.email.col-md-4.col-md-offset-2
+            %a{:href => 'mailto:derek@codeurge.com'} derek@codeurge.com
+          %li.skype.col-md-4.col-md-offset-1
+            %a{:href => '#'} Codeurge
+          %li.twitter.col-md-4.col-md-offset-2
+            %a{:href => '#'} http://twitter.com/codeurge
+          %li.gplus.col-md-4.col-md-offset-1
+            %a{:href => '#'} http://google.com/plus/codeurge
+          %li.dribbble.col-md-4.col-md-offset-2
+            %a{:href => '#'} codeurge
+        %p.col-md-4.col-md-offset-4 ... pretty much, google 'codeurge', in that color.
+    %section#footer
+      #footer.container
+        #logo
+        %p 
+          %a{:href => '#'} Uncopyright 
+          2014 CodeUrge
+        %p
+          %ul
+            %li
+              %a{:href => '#'} Privacy Policy
+            %li
+              %a{:href => '#'} Terms of Use
+            %li
+              %a{:href => '#'} Credits
+        %a{:href => '#'} Back to top
+        #socialize

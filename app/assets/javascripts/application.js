@@ -52,6 +52,14 @@ $(function() {
     	},1000);
       break;
     }
+$(".meter > span").each(function() {
+				$(this)
+					.data("origWidth", $(this).width())
+					.width(0)
+					.animate({
+						width: $(this).data("origWidth")
+					}, 1200);
+			});
 // Requiredev Nav
 		$("a").bind( 'mouseenter', function(event) {
       var theUrl=$(this).attr( 'href' ); 
