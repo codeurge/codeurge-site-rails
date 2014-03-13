@@ -1,0 +1,25 @@
+%content
+  %social
+    %p @codeurge Getting on board with Rails, new site is well on it's way!
+  %services.row
+    %services.col-xs-6
+      %div.col-md-2
+        %h1 Website Development
+        %p Put my strategic expertise to use with the newest technologies online.
+      %div.col-md-2.col-md-offset-1
+        %h1 Content Management Systems
+        %p Keep your site updated with the most relevant content, SEO strategies, social media networks, and more!
+    %services.col-xs-6
+      %div.col-md-2
+        %h1 E-commerce Solutions
+        %p Using today's modern e-commerce solutions, I build successful online stores for clients all over the globe.
+      %div.col-md-2
+        %h1 Stategic Agency Partnerships
+        %p I specialize in working with partner agencies to build sensational web experiences.
+  %blog
+    %h1 From The Blog
+    %a#visit-blog-home{:href => '/blog', :title => 'Visit Blog'} Visit Blog
+    %featured-post
+      - @articles.each do |article|
+        %h1= link_to article.title, article_path(article)
+        %p= article.created_at

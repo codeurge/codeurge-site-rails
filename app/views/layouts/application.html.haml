@@ -1,0 +1,42 @@
+!!! 5
+%html
+  %head
+    %title= "Codeurge | " + "#{action_name.capitalize}"
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = favicon_link_tag 'favicon.ico', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body{ :class => "#{controller_name} #{(action_name =~ /.*index.*/) ? 'index' : action_name}" }
+    %canvas{ :class => "#{controller_name} #{(action_name =~ /.*index.*/) ? 'index' : action_name}" }
+    %header.container-fluid
+      = render partial: "navigation"
+      %hero
+        - case "#{controller_name} #{(action_name =~ /.*index.*/) ? 'index' : action_name}"
+          - when 'pages home'
+            %h1 Full-Stack
+            %p.subtext
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut scelerisque arcu ante, a volutpat turpis ornare eget. Pellentesque sem nunc, rutrum et nisl non, interdum accumsan neque. Etiam scelerisque nisl vel rutrum fermentum. Vestibulum aliquam dolor in est ultrices interdum. Maecenas ut gravida enim. 
+          - when 'articles index'
+            %h1 Blog
+          - when 'pages about'
+            %h1 About Me
+          - when 'pages services'
+            %h1 Services
+          - when 'pages contact'
+            %h1 Contact
+          - when 'articles show'
+            %h1= @article.title
+          - else
+            %h1 Default.
+    %p.flash
+      = flash.notice
+    .container
+      %content
+        = yield
+        %hr
+        %h6
+          - if logged_in?
+            = "Logged in as #{current_user.email}"
+            = link_to "(logout)", logout_path
+          - else
+            = link_to "(login)", login_path

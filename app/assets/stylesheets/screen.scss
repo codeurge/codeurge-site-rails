@@ -1,0 +1,240 @@
+/* Fonts */
+@font-face {
+   font-family: 'ClearSans-Bold';
+    src: font_path('ClearSans-Bold.eot');
+    src: font_path('ClearSans-Bold.svg#clearsansregular') format('svg'), 
+         font_path('ClearSans-Bold.eot?#iefix') format('embedded-opentype'),
+         font_path('ClearSans-Bold.woff') format('woff'),
+         font_path('ClearSans-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+   font-family: 'ClearSans-BoldItalic';
+    src: font_path('ClearSans-BoldItalic.eot');
+    src: font_path('ClearSans-BoldItalic.svg#clearsansregular') format('svg'), 
+         font_path('ClearSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
+         font_path('ClearSans-BoldItalic.woff') format('woff'),
+         font_path('ClearSans-BoldItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+   font-family: 'ClearSans-Italic';
+    src: font_path('ClearSans-Italic.eot');
+    src: font_path('ClearSans-Italic.svg#clearsansregular') format('svg'), 
+         font_path('ClearSans-Italic.eot?#iefix') format('embedded-opentype'),
+         font_path('ClearSans-Italic.woff') format('woff'),
+         font_path('ClearSans-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+   font-family: 'ClearSans-Light';
+    src: font_path('ClearSans-Light.eot');
+    src: font_path('ClearSans-Light.svg#clearsansregular') format('svg'), 
+         font_path('ClearSans-Light.eot?#iefix') format('embedded-opentype'),
+         font_path('ClearSans-Light.woff') format('woff'),
+         font_path('ClearSans-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+   font-family: 'ClearSans-Medium';
+    src: font_path('ClearSans-Medium.eot');
+    src: font_path('ClearSans-Medium.svg#clearsansregular') format('svg'), 
+         font_path('ClearSans-Medium.eot?#iefix') format('embedded-opentype'),
+         font_path('ClearSans-Medium.woff') format('woff'),
+         font_path('ClearSans-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+   font-family: 'ClearSans-MediumItalic';
+    src: font_path('ClearSans-MediumItalic.eot');
+    src: font_path('ClearSans-MediumItalic.svg#clearsansregular') format('svg'), 
+         font_path('ClearSans-MediumItalic.eot?#iefix') format('embedded-opentype'),
+         font_path('ClearSans-MediumItalic.woff') format('woff'),
+         font_path('ClearSans-MediumItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+   font-family: 'ClearSans';
+    src: font_path('ClearSans-Regular.eot');
+    src: font_path('ClearSans-Regular.svg#clearsansregular') format('svg'), 
+         font_path('ClearSans-Regular.eot?#iefix') format('embedded-opentype'),
+         font_path('ClearSans-Regular.woff') format('woff'),
+         font_path('ClearSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+   font-family: 'ClearSans-Thin';
+    src: font_path('ClearSans-Thin.eot');
+    src: font_path('ClearSans-Thin.svg#clearsansregular') format('svg'), 
+         font_path('ClearSans-Thin.eot?#iefix') format('embedded-opentype'),
+         font_path('ClearSans-Thin.woff') format('woff'),
+         font_path('ClearSans-Thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+  font-family: 'RBNo2Light';
+  src: local('RBNo2Light'), local('RBNo2Light'),
+         url('RBNo2Light.otf') format('opentype');
+}
+
+body.home header {
+	background: #1a1a1a;
+	height: 585px;
+	box-shadow:inset 0 0 100px #4162a9;
+}
+header {
+	height: 285px;
+	background: #94592b;
+	logo {
+		background: rgba(0,0,0,0.75);
+		z-index: 2;
+		display: block;
+		-webkit-border-top-right-radius: 5px;
+		-webkit-border-bottom-right-radius: 5px;
+		-moz-border-radius-topright: 5px;
+		-moz-border-radius-bottomright: 5px;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+		position: absolute;
+		left: 0;
+		top: 50px;
+		width: 30%;
+		padding: 15px;
+		a {
+			background: url('codeurge.png');
+			width: 190px;
+			height: 57px;
+			display: block;
+			text-indent: -9999em;
+			float: right;
+		}
+		p {
+			font: 12px "ClearSans-Medium", "ClearSans", "Arial", sans-serif;
+			color: #fffedc;
+			width: 185px;
+			margin: 5px 0 0 0;
+			float: right;
+			clear: both;
+		}
+	}
+	navigation {
+		z-index: 2;
+	}
+	navigation ul {
+		display: block;
+		position: absolute;
+		list-style: none;
+		z-index: 2;
+		margin: 75px 50px 0 30%;
+		li {
+			float: left;
+			margin: 0 25px;
+			a {
+				color: #fff;
+				font: 1.25em "ClearSans", "Arial", sans-serif;
+				&:hover {
+					color: #74dad9;
+				}
+				&.active {
+					color: #ebc471;
+					&:hover {
+						color: #a0a8b0;
+					}
+				}
+			}
+		}
+	}
+	auth {
+		z-index: 2;
+		position: absolute;
+		top: 0;
+		right: 15px;
+		background: rgba(0,0,0,0.75);
+		-webkit-border-bottom-right-radius: 5px;
+		-webkit-border-bottom-left-radius: 5px;
+		-moz-border-radius-bottomright: 5px;
+		-moz-border-radius-bottomleft: 5px;
+		border-bottom-right-radius: 5px;
+		border-bottom-left-radius: 5px;
+		padding: 5px 10px;
+		color: #fffedc;
+		&:hover {
+			padding: 10px 10px;
+		}
+	}
+}
+
+body.articles header {
+	background: #64686c;
+}
+body.about header {
+	background: #a999ac;
+}
+body.services header {
+	background: #d08356;
+}
+body.contact header {
+	background: #a2a96f;
+}
+canvas{
+  position:absolute;
+	top: 0px !important;
+	left: 0px !important;
+	z-index: 1;
+}
+
+hero {
+	width: 100%;
+	float: left;
+	position: relative;
+}
+
+body hero h1 {
+	font-family: "RBNo2Light", "Arial", sans-serif;
+	font-size: 200px;
+	color: #fff;
+	z-index: 3;
+	position: relative;
+	top: 75px;
+	left: auto;
+	right: auto;
+	text-align: center;
+	text-transform: uppercase;
+}
+body.home hero h1 {
+	font-family: "RBNo2Light", "Arial", sans-serif;
+	font-size: 200px;
+	color: #fff;
+	z-index: 3;
+	position: relative;
+	top: 150px;
+	left: auto;
+	right: auto;
+	text-align: center;
+	color: #89c5f1;
+	text-transform: uppercase;
+}
+body.home hero p.subtext {
+	color: #fff;
+	font: 14px "ClearSans", "Arial", sans-serif;
+	margin: 0 auto;
+	position: relative;
+	top: 125px;
+	width: 50%;
+	background: rgba(0,0,0,0.75);
+	padding: 20px;
+	border-radius: 5px;
+	z-index: 2;
+}

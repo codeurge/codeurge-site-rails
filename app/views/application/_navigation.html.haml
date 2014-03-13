@@ -1,0 +1,26 @@
+%navigation
+  %auth
+    - if logged_in?
+      = "Logged in as #{current_user.email}"
+      = link_to "Logout", logout_path
+    - else
+      = link_to "Login", login_path
+  %logo
+    %a{:href => '/', :title => 'CodeUrge'} CodeUrge
+    %p.console
+      %span#preprompt %
+      %span#prompt
+      %span#prompt-cursor 
+        |
+      %span#caption
+  %ul
+    %li
+      = link_to 'Home', root_path, class: active_class?(root_path)
+    %li
+      = link_to 'Blog', blog_path, class: active_class?(blog_path)
+    %li
+      = link_to 'About', about_path, class: active_class?(about_path)
+    %li
+      = link_to 'Services', services_path, class: active_class?(services_path)
+    %li
+      = link_to 'Contact', contact_path, class: active_class?(contact_path)
