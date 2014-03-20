@@ -1,13 +1,18 @@
 %section#profile
-  #profile.container
+  %section.container
+    %a.defense-league{ :href => "http://internetdefenseleague.org"}
+      %img{ :src => "http://internetdefenseleague.org/images/badges/final/banner_left.png", :alt => "Member of The Internet Defense League"}
     %h1.section-title Profile
     %h5 
       I'm Derek Keith, a full-stack developer 
       %a{:href => '#'} available for hire
       , and freelance contracts.
-    #profile-quote
-      %h6 I picked up an old HTML book in 2003, and I knew it instantly - this is addiction.
-    #short-bio.col-md-3
+    %section#profile-quote
+      %h6 
+        %sup.quotemark &ldquo;
+        I picked up an old HTML book in 2003, and I knew it instantly - this is addiction.
+    %section#short-bio.col-md-3.col-md-offset-1
+      %h1 short bio
       %p
         I'm Derek Keith, an all-around computer enthusiast, developer, and systems administrator.
         I knew at an early age that the internet was going to be the future of humanity and that
@@ -18,62 +23,87 @@
         This is CodeUrge.
         %br
         This is my addiction.
-    #head.col-md-4.col-md-offset-1
-    #facts.col-md-3.col-md-offset-1
-      %h5 Name:
+    %section#head.col-md-4
+      = image_tag(asset_path("headshot.png"), :alt => "Derek Keith | Colorado-Based Full-Stack Web Developer", :class => "headshot")
+    %section#facts.col-md-3.col-md-offset-1
+      %h1 facts
+      %h2 Name:
       %p Derek Keith
-      %h5 Age:
+      %h2 Age:
       %p 25
-      %h5 Location:
+      %h2 Location:
       %p Denver, Colorado
+      %h2 Favorite Languages:
+      %p Ruby & PHP
+      %h2 Favorite Framework:
+      %p Rails 3 & 4+
 %section#abilities
   .abilities.container
     .row
       %h1.section-title Abilities
       #html5.ability.col-md-4.col-md-offset-1
-        .icon
-          HTML5
-        .meter.red
-          %span{:style => 'width: 100%;'}
-        .caption
-        %a{:href => '#'} Click To Expand
+        %section.row
+          .icon.col-md-4
+            = image_tag(asset_path("html5.png"), :alt => "HTML5", :id => "html5-icon")
+          .progress-meter.col-md-8
+            .meter.red
+              %span{:style => 'width: 100%;'}
+              .caption
+                Skilled
+                %br/
+                %a{:href => '#'} Click To Expand
       #css3.ability.col-md-4.col-md-offset-2
-        .icon
-          CSS3
-        .meter
-          %span{:style => 'width: 100%;'}
-        .caption
-        %a{:href => '#'} Click To Expand
+        .icon.col-md-4
+          = image_tag(asset_path("css3.png"), :alt => "CSS3", :id => "css3-icon")
+        .progress-meter.col-md-8
+          .meter
+            %span{:style => 'width: 100%;'}
+            .caption
+              Skilled
+              %br/
+              %a{:href => '#'} Click To Expand
     .languages.row
       #ruby.ability.col-md-4.col-md-offset-1
-        .icon
-          Ruby
-        .meter
-          %span{:style => 'width: 50%;'}
-        .caption
-        %a{:href => '#'} Click To Expand
+        .icon.col-md-4
+          = image_tag(asset_path("ruby.png"), :alt => "Ruby", :id => "ruby-icon")
+        .progress-meter.col-md-8
+          .meter
+            %span{:style => 'width: 50%;'}
+            .caption
+              Fluent
+              %br/
+              %a{:href => '#'} Click To Expand
       #php.ability.col-md-4.col-md-offset-2
-        .icon
-          PHP
-        .meter
-          %span{:style => 'width: 75%;'}
-        .caption
-        %a{:href => '#'} Click To Expand
+        .icon.col-md-4
+          = image_tag(asset_path("php.png"), :alt => "PHP", :id => "php-icon")
+        .progress-meter.col-md-8
+          .meter
+            %span{:style => 'width: 75%;'}
+            .caption
+              Strong
+              %br/
+              %a{:href => '#'} Click To Expand
     .frameworks.row
       #ruby-on-rails.ability.col-md-4.col-md-offset-1
-        .icon
-          Ruby on Rails
-        .meter
-          %span{:style => 'width: 25%;'}
-        .caption
-        %a{:href => '#'} Click To Expand
+        .icon.col-md-4
+          = image_tag(asset_path("rails.png"), :alt => "Ruby on Rails", :id => "rails-icon")
+        .progress-meter.col-md-8
+          .meter
+            %span{:style => 'width: 25%;'}
+            .caption
+              Fluent
+              %br/
+              %a{:href => '#'} Click To Expand
       #wordpress.ability.col-md-4.col-md-offset-2
-        .icon
-          WordPress
-        .meter
-          %span{:style => 'width: 75%;'}
-        .caption
-        %a{:href => '#'} Click To Expand
+        .icon.col-md-4
+          = image_tag(asset_path("wordpress.png"), :alt => "WordPress", :id => "wordpress-icon")
+        .progress-meter.col-md-8
+          .meter
+            %span{:style => 'width: 75%;'}
+            .caption
+              Strong
+              %br/
+              %a{:href => '#'} Click To Expand
     #other-tools.row
       %ul.row
         %li.col-md-5.col-md-offset-1
@@ -144,10 +174,10 @@
   #employment-history.container
     %h1.section-title Experience
     %article#handy-networks
-      .entry-title.col-md-2
+      .entry-title.col-md-2.col-md-offset-1
         %h1 Handy Networks
         %p 2013 - 2014
-      .entry-content.col-md-8.col-md-offset-2
+      .entry-content.col-md-7.col-md-offset-1
         %h2 Support Team - Shift Leader
         %p 
           Assisted customers with hosting plans in a data center environment.
@@ -158,10 +188,10 @@
           %a{:href => '#'} http://handynetworks.com 
           | Denver, Colorado
     %article#requiredev
-      .entry-title.col-md-2
+      .entry-title.col-md-2.col-md-offset-1
         %h1 Require(dev)
         %p 2012 - 2013
-      .entry-content.col-md-8.col-md-offset-2
+      .entry-content.col-md-7.col-md-offset-1
         %h2 Co-Founder, Sr. Developer
         %p 
           As a Co-Founder of this development outsourcing company my hands were in several roles
@@ -172,10 +202,10 @@
           %a{:href => '#'} Site Offline
           | Denver, Colorado
     %article#godaddy
-      .entry-title.col-md-2
+      .entry-title.col-md-2.col-md-offset-1
         %h1 GoDaddy.com
         %p 2011 - 2012
-      .entry-title.col-md-8.col-md-offset-2
+      .entry-content.col-md-7.col-md-offset-1
         %h2 Linux Systems Administrator
         %p 
           GoDaddy.com expressed an interest in my mix of administration skills with programming
@@ -187,10 +217,10 @@
           %a{:href => '#'} http://godaddy.com
           | Denver, Colorado
     %article#latisys
-      .entry-title.col-md-2
+      .entry-title.col-md-2.col-md-offset-1
         %h1 Latisys
         %p 2009 - 2011
-      .entry-title.col-md-8.col-md-offset-2
+      .entry-content.col-md-7.col-md-offset-1
         %h2 Systems Engineer
         %p 
           Hired as NOC Technician, later promoted to Systems Engineer in response to individual 
@@ -202,10 +232,10 @@
           %a{:href => '#'} http://latisys.com
           | Englewood, Colorado
     %article#Lawgical
-      .entry-title.col-md-2
+      .entry-title.col-md-2.col-md-offset-1
         %h1 Lawgical
         %p 2007 - 2009
-      .entry-title.col-md-8.col-md-offset-2
+      .entry-content.col-md-7.col-md-offset-1
         %h2 Web Developer
         %p 
           Assisted as part of a development team that builds online tools for use within the legal
@@ -217,10 +247,10 @@
           %a{:href => '#'} http://lawgical.com
           | Denver, Colorado
     %article#dbsinteractive
-      .entry-title.col-md-2
+      .entry-title.col-md-2.col-md-offset-1
         %h1 DBS>Interactive      
         %p 2006 - 2007
-      .entry-title.col-md-8.col-md-offset-2
+      .entry-content.col-md-7.col-md-offset-1
         %h2 Web Developer
         %p 
           Assisted as part of a development team that builds online tools for use within the legal
@@ -231,31 +261,6 @@
           URL:
           %a{:href => '#'} http://dbsinteractive.com
           | Louisville, KY
-%section#hobbies
-  #hobbies.container
-    %h1.section-title Hobbies
-    %article#music.col-md-12
-      .icon.col-md-3
-      .article-details.col-md-8.col-md-offset-1
-        %h1 Music
         %p 
           There’s a reason music is first on the list, because I simply do not know how I’d function without music. I’m mostly prepared for the zombie apocalypse - but I’d still have to play my vinyls even if it attracts the undead.
           Yeah, I’m one of those people. I love putting on a vinyl and using it to break my programming sessions into ~15-20 minute increments between side flips.
-    %article#cycling
-      .icon.col-md-3
-      .article-details.col-md-8.col-md-offset-1
-        %h1 Cycling
-        %p Admittedly, I’m rather new to bicycling as an adult. Sure I did it around the neighborhood as a kid - but as an adult I can go places. It’s different than going places in my car; it’s relaxed, surprising, and dynamic - all the while, taking my breath away both literally and figuratively.
-    %article#astronomy
-      .icon.col-md-3
-      .article-details.col-md-8.col-md-offset-1
-        %h1 Astronomy
-        %p 
-          I pretend to be an ametur astrophotography every chance I get to drive out to the dark sky site 3 hours outside of Denver. I find that stargazing and photographing the universe can really keep things in perspective.
-          %br
-          Orion, is my favorite constellation - he’s out right now! Go see for yourself!
-    %article#hacking
-      .icon.col-md-3
-      .article-details.col-md-8.col-md-offset-1
-        %h1 Hacking
-        %p Raspberry Pi and other similar hardware really amazes me with the power they pack. I personally own 3 RPi’s, 2 act as 1080p Night Vision Security Cameras, and the third is a 1080p DTS-HD Media Center. Pretty neat for ~$45.

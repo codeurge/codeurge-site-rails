@@ -10,7 +10,7 @@
     %canvas{ :class => "#{controller_name} #{(action_name =~ /.*index.*/) ? 'index' : action_name}" }
     %header.container-fluid
       = render partial: "navigation"
-      %hero
+      %section#hero
         - case "#{controller_name} #{(action_name =~ /.*index.*/) ? 'index' : action_name}"
           - when 'pages home'
             %h1 Full-Stack
@@ -30,7 +30,7 @@
             %h1 Default.
     %p.flash
       = flash.notice
-    %content
+    %main
       = yield
     %section#contact
       #contact.container
@@ -50,18 +50,20 @@
             %a{:href => '#'} codeurge
         %p.col-md-4.col-md-offset-4 ... pretty much, google 'codeurge', in that color.
     %section#footer
-      #footer.container
-        #logo
-        %p 
-          %a{:href => '#'} Uncopyright 
-          2014 CodeUrge
-        %p
-          %ul
-            %li
-              %a{:href => '#'} Privacy Policy
-            %li
-              %a{:href => '#'} Terms of Use
-            %li
-              %a{:href => '#'} Credits
-        %a{:href => '#'} Back to top
-        #socialize
+      %section#footer.container
+        %section.col-md-3.col-md-offset-1
+          %aside#footer-logo
+          %p 
+            %a{:href => '#'} Uncopyright 
+            2014 CodeUrge, LLC.
+          %p
+            %ul
+              %li
+                %a{:href => '#'} Privacy Policy
+              %li
+                %a{:href => '#'} Terms of Use
+              %li
+                %a{:href => '#'} Credits
+        %section.col-md-3.col-md-offset-4 
+          %a{:href => '#', :class => 'backtotop'} Back to top
+          #socialize

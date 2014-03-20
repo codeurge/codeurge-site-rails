@@ -60,7 +60,7 @@ $(".meter > span").each(function() {
 						width: $(this).data("origWidth")
 					}, 1200);
 			});
-// Requiredev Nav
+// CodeUrge Nav
 		$("a").bind( 'mouseenter', function(event) {
       var theUrl=$(this).attr( 'href' ); 
       switch (theUrl)
