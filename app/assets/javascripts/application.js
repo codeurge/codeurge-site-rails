@@ -18,6 +18,68 @@
 //= require bootstrap
 
 $(function() {
+/* NAVIGATION FUNCTIONS */
+
+function applyClickEvent()
+{
+		$('a[href*=#]').click(function(e)
+					{
+						e.preventDefault();
+						if( $( $.attr(this, 'href') ).length > 0 ) {
+							$('html, body').animate({
+								scrollTop: $( $.attr(this, 'href') ).offset().top - 109
+							}, "slow");
+						}
+						else {
+							$('html, body').animate({
+								scrollTop: 0
+							}, "slow");
+						}
+						return false;
+					});
+}
+
+function applyStickyNavigation()
+{
+		lnStickyNavigation = $('aside#logo').offset().top + 20;
+		lnProfileSection = $('section#profile').offset().top + 20;
+	
+			$(window).on('scroll', function() 
+						{  
+									stickyNavigation();  
+									darkNavigation();
+										});  
+				
+				stickyNavigation();
+				darkNavigation();
+}
+
+function stickyNavigation()
+{         
+		if($(window).scrollTop() > lnStickyNavigation) 
+				{   
+							$('body').addClass('fixed');  
+								} 
+			else 
+					{  
+								$('body').removeClass('fixed');   
+									}  
+}
+
+function darkNavigation()
+{
+	if($(window).scrollTop() > lnProfileSection)
+	{
+		$('nav').addClass('dark');
+	}
+	else
+	{
+		$('nav').removeClass('dark');
+	}
+}
+
+		applyClickEvent();
+		applyStickyNavigation();
 
 // Prompt Cursor Fade
   	function blink() {
@@ -88,14 +150,6 @@ $(".meter > span").each(function() {
 // First you forcibly request the scroll bars to be shown regardless if you they will be needed or not.
 $('body').css('overflow', 'scroll');
 
-// Viewport width with scroll bar.
-var widthWithScrollBars = $(window).width();
-
-$(window).resize(function() {
-	widthWithScrollBars = $(window).width();
-	
-});
-
 // Set the overflow css property back to whatever value it had before running this code. (default is auto)
 $('body').css('overflow', 'auto');
 		 	$window = $(window);
@@ -134,6 +188,15 @@ $('body').css('overflow', 'auto');
 			var   canvas = document.querySelector('canvas.' + pathname);
 			break;
 			}
+// Viewport width with scroll bar.
+var widthWithScrollBars = $(window).width();
+
+$(window).resize(function() {
+	widthWithScrollBars = $(window).width();
+	canvasAnimate();
+});
+
+function canvasAnimate() {
     var		 ctx = canvas.getContext('2d'),
 			header = document.querySelector('header'),
    particles = [],
@@ -141,9 +204,11 @@ $('body').css('overflow', 'auto');
       colors = ['#d08356','#ebc471','#c2c98f','#74dad9','#fffedc'];
  
 canvas.width = widthWithScrollBars;
+
 //canvas.style.left = (window.innerWidth - 500)/2+'px';
 if(window.innerHeight>500)
 //canvas.style.top = (window.innerHeight - 500)/2+'px';
+
   
 function Factory(){  
   this.x =  Math.round( Math.random() * w);
@@ -224,4 +289,7 @@ window.requestAnimFrame = (function(){
   draw();
   requestAnimFrame(loop);
 })();
+}
+canvasAnimate();
+
 });

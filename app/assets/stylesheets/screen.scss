@@ -159,6 +159,28 @@ body.services header {
 body.contact header {
 	background: $green;
 }
+body.fixed nav {
+	width: 100%;
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: $dark-grey;
+	aside#logo {
+		top: 0;
+		width: 100%;
+	}
+	ul {
+		margin-top: 35px;
+	}
+}
+
+nav.dark {
+	aside#logo {
+	background-color: #303030 !important;
+	border-radius: 0px;
+	}
+}
 
 header {
 	height: 285px;
