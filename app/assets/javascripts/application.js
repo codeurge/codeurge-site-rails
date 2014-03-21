@@ -157,7 +157,7 @@ $('body').css('overflow', 'auto');
 			case "/":
 				var canvas = document.querySelector('canvas.home');
 				var h = 585;
-				var particlesNum = 80;
+				var particlesNum = 120;
 				canvas.height = 585;
 			break;
 			case "/blog":
@@ -214,9 +214,9 @@ function Factory(){
   this.x =  Math.round( Math.random() * w);
   this.y =  Math.round( Math.random() * h);
   this.rad = Math.round( Math.random() * 1) + 1;
-  this.rgba = colors[ Math.round( Math.random() * 3) ];
-  this.vx = Math.round( Math.random() * 3) - 1.5;
-  this.vy = Math.round( Math.random() * 3) - 1.5;
+  this.rgba = colors[ Math.round( Math.random() * 5) ];
+  this.vx = Math.round( Math.random() * 1) - 1.5;
+  this.vy = Math.round( Math.random() * 1) - 1.5;
 }
    
 function draw(){
@@ -229,7 +229,7 @@ function draw(){
     for(var j = 0; j<particlesNum; j++){
       
        var temp2 = particles[j];
-       ctx.linewidth = 0.5;
+       ctx.lineWidth = 1.5;
       
        if(temp.rgba == temp2.rgba && findDistance(temp, temp2)<50){
           ctx.strokeStyle = temp.rgba;
@@ -238,6 +238,7 @@ function draw(){
           ctx.lineTo(temp2.x, temp2.y);
           ctx.stroke();
           factor++;
+					factor++;
        }
     }
     
@@ -251,7 +252,7 @@ function draw(){
     ctx.closePath();
     
     ctx.beginPath();
-    ctx.arc(temp.x, temp.y, (temp.rad+5)*factor, 0, Math.PI*2, true);
+    ctx.arc(temp.x, temp.y, (temp.rad+2)*factor, 0, Math.PI*2, true);
     ctx.stroke();
     ctx.closePath();
     
