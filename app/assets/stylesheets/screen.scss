@@ -169,6 +169,14 @@ body.fixed nav {
 	aside#logo {
 		top: 0;
 		width: 100%;
+		a {
+			float: left;
+			margin: 0 0 0 15%;
+		}
+		p { 
+			float: left;
+			margin: 0 0 0 15%;
+		}
 	}
 	ul {
 		margin-top: 35px;
@@ -218,7 +226,7 @@ header {
 		}
 	}
 	nav {
-		z-index: 2;
+		z-index: 99;
 		ul {
 			display: block;
 			position: absolute;
@@ -308,7 +316,7 @@ h1.section-title {
 		font-family: "ClearSans-Medium", "Arial", sans-serif;
 		text-align: center;
 		font-size: 60px;
-		margin: 60px 0;
+		margin: 40px 0;
 	}
 
 /* Profile Styles */
