@@ -39,9 +39,6 @@ $(function(){
       {
       case "#top":
         container.shuffleLetters({"text": "cd ~"});
-        $( 'html, body' ).stop().animate({
-            scrollTop: 0
-        }, 1500, 'easeInOutExpo' );
       	setTimeout(function(){ // Leave a 2 second pause
         	container.shuffleLetters({
         		"text": "Pragmatic Development"
