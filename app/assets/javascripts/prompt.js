@@ -44,13 +44,13 @@ $(function(){
         }, 1500, 'easeInOutExpo' );
       	setTimeout(function(){ // Leave a 2 second pause
         	container.shuffleLetters({
-        		"text": "Painless Web Development"
+        		"text": "Pragmatic Development"
         	});		
       	},2000);
         event.preventDefault();
         break;
 				case "#":
-	        container.shuffleLetters({"text": "Painless Web Development"});
+	        container.shuffleLetters({"text": "Pragmatic Development"});
 	        break;
       default:
         container.shuffleLetters({"text": "cd " + theUrl});
