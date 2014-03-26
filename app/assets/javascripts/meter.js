@@ -1,5 +1,5 @@
 $(function() {
-$(".meter > span:visible").each(function() {
+$(".meter > span").each(function() {
 				$(this)
 					.data("origWidth", $(this).width())
 					.width(0)
