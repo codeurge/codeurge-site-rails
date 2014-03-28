@@ -1,6 +1,6 @@
 %section#profile
   %section.container
-    %a.defense-league{ :href => "http://internetdefenseleague.org"}
+    %a.defense-league.hidden-xs{ :href => "http://internetdefenseleague.org"}
       %img{ :src => "http://internetdefenseleague.org/images/badges/final/banner_left.png", :alt => "Member of The Internet Defense League"}
     %h1.section-title Profile
     %h5 
@@ -11,7 +11,7 @@
       %h6 
         %sup.quotemark &ldquo;
         I picked up an old HTML book in 2003, and I knew it instantly - this is addiction.
-    %section#short-bio.col-md-3.col-md-offset-1
+    %section#short-bio.col-sm-3.col-md-3.col-md-offset-1
       %h1 short bio
       %p
         I'm Derek Keith, an all-around computer enthusiast, developer, and systems administrator.
@@ -23,9 +23,9 @@
         This is CodeUrge.
         %br
         This is my addiction.
-    %section#head.col-md-4
+    %section#head.hidden-xs.col-sm-3.col-sm-offset-1.col-md-4.col-md-offset-0
       = image_tag(asset_path("headshot.png"), :alt => "Derek Keith | Colorado-Based Full-Stack Web Developer", :class => "headshot")
-    %section#facts.col-md-3.col-md-offset-1
+    %section#facts.col-sm-3.col-sm-offset-2.col-md-3.col-md-offset-1
       %h1 facts
       %h2 Name:
       %p Derek Keith

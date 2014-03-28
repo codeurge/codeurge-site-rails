@@ -2,8 +2,8 @@ $(function(){
 // Prompt Cursor Fade
   	function blink() {
     $("#prompt-cursor")
-      .fadeTo(1100, 0.13)
-      .fadeTo(1100, 1, function(){blink()});
+      .fadeTo(1100, 0.09)
+      .fadeTo(1100, 2, function(){blink()});
     }
     blink();
     

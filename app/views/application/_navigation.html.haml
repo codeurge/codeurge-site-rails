@@ -1,24 +1,36 @@
-%nav
-  %aside#auth
-    - if logged_in?
-      = "Logged in as #{current_user.email}"
-      = link_to "Logout", logout_path
-    - else
-      = link_to "Login", login_path
-  %aside#logo
-    %a{:href => '/', :title => 'CodeUrge'} CodeUrge
-    %p.console
-      %span#preprompt %
-      %span#prompt
-      %span#prompt-cursor 
-        |
-      %span#caption
-  %ul
-    %li
-      %a{:href => "#profile", :alt => 'Profile'} Profile
-    %li
-      %a{:href => "#abilities", :alt => 'Abilities'} Abilities
-    %li
-      %a{:href => "#contact", :alt => 'Contact'} Contact
-    %li
-      = link_to 'Blog', blog_path, class: active_class?(blog_path)
+.row
+  #logo-extend-left
+  #logo.col-xs-8.col-sm-4
+    .logo.pull-right
+      %a{:href => '/', :title => 'CodeUrge'} CodeUrge
+      %p.console
+        %span#preprompt
+          \%
+        %span#prompt
+        %span#prompt-cursor
+          ▌   
+        %span#caption
+  %nav.navbar.navbar-default.navbar-inverse.col-xs-4.col-sm-8.col-md-8{:role => 'navigation'}
+    .container-fluid
+      .navbar-header
+        %button.navbar-toggle{"type" => 'button', "data-target" => "#navbarCollapse", "data-toggle" => "collapse"} 
+          %span.sr-only Toggle Navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+      #navbarCollapse.collapse.navbar-collapse
+        %ul.nav.navbar-nav
+          %li
+            %a{:href => "#profile", :alt => 'Profile'} Profile
+          %li
+            %a{:href => "#abilities", :alt => 'Abilities'} Abilities
+          %li
+            %a{:href => "#contact", :alt => 'Contact'} Contact
+          %li
+            = link_to 'Blog', blog_path, class: active_class?(blog_path)
+        %aside#auth.navbar-form.navbar-right
+          - if logged_in?
+            = "Logged in as #{current_user.email}"
+            = link_to "Logout", logout_path
+          - else
+            = link_to "Login", login_path

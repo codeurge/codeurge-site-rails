@@ -144,7 +144,6 @@ body {
 
 body.home header {
 	background-color: $dark-grey;
-	height: 585px;
 	box-shadow:inset 0 0 100px #4162a9;
 }
 body.articles header {
@@ -159,140 +158,54 @@ body.services header {
 body.contact header {
 	background: $green;
 }
-body.fixed nav {
-	width: 100%;
-	display: block;
-	position: fixed;
-	top: 0;
-	left: 0;
-	background-color: $dark-grey;
-	aside#logo {
-		top: 0;
-		width: 100%;
-		a {
-			float: left;
-			margin: 0 0 0 15%;
-		}
-		p { 
-			float: left;
-			margin: 0 0 0 15%;
-		}
-	}
-	ul {
-		margin-top: 35px;
-	}
-}
-
-nav.dark {
-	aside#logo {
-	background-color: #303030 !important;
-	border-radius: 0px;
-	}
-}
-
+$h1-size: 130px;
 header {
-	height: 285px;
 	background: #94592b;
-	aside#logo {
+	margin-bottom: 0px !important;
+	#logo-extend-left {
 		background: rgba(0,0,0,0.75);
-		z-index: 2;
-		display: block;
-		-webkit-border-top-right-radius: 5px;
-		-webkit-border-bottom-right-radius: 5px;
-		-moz-border-radius-topright: 5px;
-		-moz-border-radius-bottomright: 5px;
-		border-top-right-radius: 5px;
-		border-bottom-right-radius: 5px;
+		height: 130px;
 		position: absolute;
 		left: 0;
-		top: 50px;
-		width: 30%;
-		padding: 15px;
+		right: 90%;
+	}
+	#logo {
+		background: rgba(0,0,0,0.75);
+		z-index: 4;
+		padding: 20px;
+		position: relative;
 		a {
-			background: url('codeurge.png');
-			width: 190px;
+			text-indent: -999em;
+			background: url('codeurge.png') no-repeat;
 			height: 57px;
+			width: 190px;
 			display: block;
-			text-indent: -9999em;
-			float: right;
 		}
-		p {
-			font: 12px "ClearSans-Medium", "ClearSans", "Arial", sans-serif;
+		p.console {
 			color: $off-white;
-			width: 185px;
-			margin: 5px 0 0 0;
-			float: right;
-			clear: both;
+			font-size: 12px;
+			#prompt-cursor {
+				text-shadow: 0.1em 0.1em 0.2em #fff;
+			}
 		}
 	}
-	nav {
-		z-index: 99;
-		ul {
-			display: block;
-			position: absolute;
-			list-style: none;
-			z-index: 2;
-			margin: 75px 50px 0 30%;
-			li {
-				float: left;
-				margin: 0 25px;
-				a {
-					color: $white;
-					font: 1.25em "ClearSans", "Arial", sans-serif;
-					&:hover {
-						color: $cyan;
-					}
-					&.active {
-						color: $light-orange;
-						&:hover {
-							color: $light-grey-blue;
-						}
-					}
-				}	
-			}
-		}
-		aside#auth {
-			z-index: 2;
-			position: absolute;
-			top: 0;
-			right: 15px;
-			background: rgba(0,0,0,0.75);
-			-webkit-border-bottom-right-radius: 5px;
-			-webkit-border-bottom-left-radius: 5px;
-			-moz-border-radius-bottomright: 5px;
-			-moz-border-radius-bottomleft: 5px;
-			border-bottom-right-radius: 5px;
-			border-bottom-left-radius: 5px;
-			padding: 5px 10px;
-			color: $off-white;
-			&:hover {
-				padding: 10px 10px;
-			}
-		}
+	.navbar {
+		z-index: 999;
+		background: transparent !important;
+		border: 0 none !important;
 	}
 	section#hero {
 		width: 100%;
-		float: left;
-		POSITIon: relative;
-	  & h1 {
+	  h1 {
 			font-family: "RBNo2Light", "Arial", sans-serif;
-			font-size: 200px;
-			z-index: 3;
-			position: relative;
-			top: 150px;
-			left: auto;
-			right: auto;
-			text-align: center;
+			font-size: $h1-size;
+			z-index: 4;
 			color: $light-grey-blue;
 			text-transform: uppercase;
 		}
-		& p.subtext {
+		p.subtext {
 			color: $white;
 			font: 14px "ClearSans", "Arial", sans-serif;
-			margin: 0 auto;
-			position: relative;
-			top: 125px;
-			width: 50%;
 			background: rgba(0,0,0,0.75);
 			padding: 20px;
 			border-radius: 5px;
@@ -300,11 +213,17 @@ header {
 		}
 	}
 }
+@media screen and (min-width: 768px) {
+	header h1 {
+		font-size: $h1-size * 1.5 !important;
+	}
+}
 canvas {
-	position:absolute;
-	top: 0px !important;
-	left: 0px !important;
+	height: 100%;
+	width: 100%;
 	z-index: 1;
+	position: absolute;
+	height: 555px;
 }
 
 body p.flash {

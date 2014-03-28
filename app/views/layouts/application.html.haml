@@ -1,20 +1,20 @@
 !!! 5
 %html
   %head
-    %title= "Codeurge | " + "#{action_name.capitalize}"
+    %title= "CodeUrge | " + "#{action_name.capitalize}"
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = favicon_link_tag 'favicon.ico', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body{ :class => "#{controller_name} #{(action_name =~ /.*index.*/) ? 'index' : action_name}" }
-    %canvas{ :class => "#{controller_name} #{(action_name =~ /.*index.*/) ? 'index' : action_name}" }
-    %header.container-fluid
+    #wave
+    %header.jumbotron
       = render partial: "navigation"
-      %section#hero
+      %section#hero.container
         - case "#{controller_name} #{(action_name =~ /.*index.*/) ? 'index' : action_name}"
           - when 'pages home'
-            %h1 Full-Stack
-            %p.subtext
+            %h1.text-center Full-Stack
+            %p.subtext.text-center.col-xs-12.col-sm-12.col-md-12.col-lg-8.col-lg-offset-2
               With my diverse skills I am able to provide a full-stack development experience. I am able to assist your project with design, development, deployment, and more. I feel I'm on the verge of doing some amazing things.
           - when 'articles index'
             %h1 Blog
@@ -43,11 +43,11 @@
           %li.skype.col-md-4.col-md-offset-1
             %a{:href => 'skype:CodeUrge?chat'} CodeUrge
           %li.twitter.col-md-4.col-md-offset-2
-            %a{:href => 'http://twitter.com/codeurge', :target => '_new'} http://twitter.com/codeurge
+            %a{:href => 'http://twitter.com/codeurge', :target => '_new'} http://twitter.com/CodeUrge
           %li.gplus.col-md-4.col-md-offset-1
-            %a{:href => 'http://google.com/plus/codeurge', :target => '_new'} http://google.com/plus/codeurge
+            %a{:href => 'http://google.com/plus/codeurge', :target => '_new'} http://google.com/plus/CodeUrge
           %li.dribbble.col-md-4.col-md-offset-2
-            %a{:href => 'http://dribbble.com/codeurge', :target => '_new'} codeurge
+            %a{:href => 'http://dribbble.com/codeurge', :target => '_new'} CodeUrge
         %div.col-md-4.col-md-offset-4.timer-wrapper
           %p
             Since you've been on this page
@@ -73,3 +73,33 @@
         %section.col-md-3.col-md-offset-4 
           %a{:href => '#top', :class => 'backtotop'} Back to top
           #socialize
+%script#oceanSurfaceVert{:type => "x-shader/x-vertex"}
+  varying vec3 v_objCoor;
+  void main() {
+  v_objCoor = position;
+  gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+  }
+%script#oceanSurfaceFrag{:type => "x-shader/x-fragment"}
+  uniform vec3 u_color;
+  varying vec3 v_objCoor;
+
+  float remap (float value, float initStart, float initEnd, float finalStart, float finalEnd)
+  {
+  float mapped = (( (value - initStart) *(finalEnd - finalStart) ) / (initEnd- initStart)) + finalStart;
+  return mapped;
+  }
+
+  void main() {
+  vec3 cameraPos = vec3(-338.0, -48.0, 2000.0);
+  float border = -100.0;
+
+  float alpha = remap(v_objCoor.y+border, 0.0, cameraPos.z*3.0, 0.0, 1.0);
+  float red = remap(v_objCoor.z, -500.0, 500.0, 0.8, 1.0);
+  float green = remap(v_objCoor.z, -500.0, 500.0, 0.8, 1.0);
+  
+  gl_FragColor=vec4(red, green,248.0/256.0, alpha);
+    
+    
+  }
+%script
+  waveStart();

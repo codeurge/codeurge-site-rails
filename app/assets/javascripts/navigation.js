@@ -18,47 +18,4 @@ function applyClickEvent()
 						return false;
 					});
 }
-
-function applyStickyNavigation()
-{
-		lnStickyNavigation = $('aside#logo').offset().top + 20;
-		lnProfileSection = $('section#profile').offset().top + 20;
-	
-			$(window).on('scroll', function() 
-						{  
-									stickyNavigation();  
-									darkNavigation();
-										});  
-				
-				stickyNavigation();
-				darkNavigation();
-}
-
-function stickyNavigation()
-{         
-		if($(window).scrollTop() > lnStickyNavigation) 
-				{   
-							$('body').addClass('fixed');  
-								} 
-			else 
-					{  
-								$('body').removeClass('fixed');   
-									}  
-}
-
-function darkNavigation()
-{
-	if($(window).scrollTop() > lnProfileSection)
-	{
-		$('nav').addClass('dark');
-	}
-	else
-	{
-		$('nav').removeClass('dark');
-	}
-}
-
-		applyClickEvent();
-		applyStickyNavigation();
-
-		});
+});
