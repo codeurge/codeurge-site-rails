@@ -1,4 +1,6 @@
 $(function () {
+		timer();
+		mileage();
     function timer() {
         var timer = 0;
         var timerContainer = $(".timer");
@@ -8,7 +10,7 @@ $(function () {
         var timeMinLabel = $('<span>').addClass('hr-label').text(' m, ');
         var timeSec = $('<span>').addClass('sec').text('00');
         var timeSecLabel = $('<span>').addClass('hr-label').text(' s');
-        timerContainer.html('').append(timeHour).append(timeHourLabel).append(timeMin).append(timeMinLabel).append(timeSec).append(timeSecLabel);
+        timerContainer.html('').append(timeHour).append(timeHourLabel).append(timeMin).append(timeMinLabel).append(timeSec).append(timeSecLabel).append(" ago");
         
     function runTimer() {
         var hour = parseFloat(timeHour.text());
@@ -44,8 +46,6 @@ $(function () {
     }
         timer = setInterval(runTimer, 1000);
     }
-    timer();
-    
     function mileage() {
         var mileage = 0;
         var mileageContainer = $(".mileage");
@@ -59,6 +59,4 @@ $(function () {
         
         setInterval(mileageCounter, 1000);
     }
-    mileage();
-    
 });

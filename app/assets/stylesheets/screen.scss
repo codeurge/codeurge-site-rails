@@ -361,10 +361,25 @@ section#hobbies {
 section#contact {
 	background: $dark-grey;
 	color: $mid-grey-blue;
+	h2 {
+		font: 1.714em "ClearSans", "Arial", sans-serif;
+		color: $violet;
+		text-transform: uppercase;
+	}
+	h3 {
+		font: 1.286em "ClearSans", "Arial", sans-serif;
+		color: $off-white;
+		text-decoration: italic;
+		font-weight: bold;
+		line-height: 1.571em;
+	}
 	ul { 
 		list-style: none; 
 		li { 
 			margin-bottom: 0.714em; 
+			a {
+				display: block;
+			}
 		}
 		li.linkedin a {
 			background: url('linkedin.png') left center no-repeat;
@@ -379,16 +394,16 @@ section#contact {
 			padding: 0 0 0 2.5em;
 		}
 		li.twitter a {
-			background: url('twitter.png') left center no-repeat;
-			padding: 0 0 0 2.5em;
+			background: url('twitter.png') right center no-repeat;
+			padding: 0 2.5em 0 0;
 		}
 		li.dribbble a {
-			background: url('dribbble.png') left center no-repeat;
-			padding: 0 0 0 2.5em;
+			background: url('dribbble.png') right center no-repeat;
+			padding: 0 2.5em 0 0;
 		}
 		li.email a {
-			background: url('email.png') left center no-repeat;
-			padding: 0 0 0 2.5em;
+			background: url('email.png') right center no-repeat;
+			padding: 0 2.5em 0 0;
 		}
 	}
 }
@@ -411,6 +426,11 @@ section#footer {
 	}
 	p {
 		font: 0.714em "ClearSans", "Arial", sans-serif;
+	}
+	h2 {
+		font: 1.714em "ClearSans", "Arial", sans-serif;
+		color: $violet;
+		text-transform: uppercase;
 	}
 	ul { 
 		list-style: none; 
@@ -447,6 +467,7 @@ section#footer {
 .timer-wrapper { 
 	margin-top: 1em;
 	margin-bottom: 1em;
+	text-align: center;
 }
 .hr { display: none; }
 .hr-label { display: none; }
