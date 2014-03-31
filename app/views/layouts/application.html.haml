@@ -17,17 +17,10 @@
             %p.subtext.text-center.col-xs-12.col-sm-12.col-md-12.col-lg-8.col-lg-offset-2
               With my diverse skills I am able to provide a full-stack development experience. I am able to assist your project with design, development, deployment, and more. I feel I'm on the verge of doing some amazing things.
           - when 'articles index'
-            %h1 Blog
-          - when 'pages about'
-            %h1 About Me
-          - when 'pages services'
-            %h1 Services
-          - when 'pages contact'
-            %h1 Contact
+            %h1.text-center Blog
           - when 'articles show'
             %h1= @article.title
           - else
-            %h1 Default.
     %p.flash
       = flash.notice
     %main
@@ -58,18 +51,8 @@
     %section#footer
       %section#footer.container
         %section.col-md-3.col-md-offset-1
-          %aside#footer-logo
           %p 
-            %a{:href => 'http://unlicense.org'} Uncopyright 
-            2014 CodeUrge, LLC.
-          %p
-            %ul
-              %li
-                %a{:href => '#'} Privacy Policy
-              %li
-                %a{:href => '#'} Terms of Use
-              %li
-                %a{:href => '#'} Credits
+            %a{:href => 'http://unlicense.org', :target => "_new"} Unlicense
         %section.col-md-3.col-md-offset-4 
           %a#gototop{:href => '#top'}
           #socialize
@@ -101,5 +84,3 @@
     
     
   }
-%script
-  waveStart();

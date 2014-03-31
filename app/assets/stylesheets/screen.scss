@@ -166,7 +166,7 @@ body.services header {
 body.contact header {
 	background: $green;
 }
-$h1-size: 130px;
+$h1-size: 9.286em;
 header {
 	background: #94592b;
 	margin-bottom: 0 !important;
@@ -227,11 +227,8 @@ header {
 	}
 }
 canvas {
-	height: 100%;
-	width: 100%;
 	z-index: 1;
 	position: absolute;
-	height: 39.643em;
 }
 
 body p.flash {
@@ -243,7 +240,7 @@ h1.section-title {
 		font-family: "ClearSans-Medium", "Arial", sans-serif;
 		text-align: center;
 		font-size: 4.286em;
-		margin: 1.857em 0;
+		line-height: 2em;
 	}
 
 /* Profile Styles */
@@ -339,13 +336,13 @@ section#abilities {
 /* Experience Styles */
 section#experience {
 	background: #fbfbfb;
-	padding: 35px 0;
+	padding: 2.5em 0;
 	.entry-title h1 {
-		font: 18px "ClearSans", "Arial", sans-serif;
+		font: 1.286em "ClearSans", "Arial", sans-serif;
 		color: $dark-grey;
 	}
 	.entry-content h2 {
-		font: 14px "ClearSans", "Arial", sans-serif;
+		font: 1em "ClearSans", "Arial", sans-serif;
 		color: $dark-grey;
 		font-style: italic;
 		font-weight: bold;
@@ -365,31 +362,31 @@ section#contact {
 	ul { 
 		list-style: none; 
 		li { 
-			margin-bottom: 10px; 
+			margin-bottom: 0.714em; 
 		}
 		li.linkedin a {
 			background: url('linkedin.png') left center no-repeat;
-			padding: 0 0 0 35px;
+			padding: 0 0 0 2.5em;
 		}
 		li.skype a {
 			background: url('skype.png') left center no-repeat;
-			padding: 0 0 0 35px;
+			padding: 0 0 0 2.5em;
 		}
 		li.gplus a {
 			background: url('gplus.png') left center no-repeat;
-			padding: 0 0 0 35px;
+			padding: 0 0 0 2.5em;
 		}
 		li.twitter a {
 			background: url('twitter.png') left center no-repeat;
-			padding: 0 0 0 35px;
+			padding: 0 0 0 2.5em;
 		}
 		li.dribbble a {
 			background: url('dribbble.png') left center no-repeat;
-			padding: 0 0 0 35px;
+			padding: 0 0 0 2.5em;
 		}
 		li.email a {
 			background: url('email.png') left center no-repeat;
-			padding: 0 0 0 35px;
+			padding: 0 0 0 2.5em;
 		}
 	}
 }
@@ -405,13 +402,13 @@ section#footer {
 	background: $dark-grey;
 	color: $mid-grey-blue;
 	aside#footer-logo {
-		background: url('codeurge.png');
-		width: 190px;
-		height: 57px;
+		background: url('codeurge.png') no-repeat;
+		width: 13.571em;
+		height: 4.071em;
 		display: block;
 	}
 	p {
-		font: 10px "ClearSans", "Arial", sans-serif;
+		font: 0.714em "ClearSans", "Arial", sans-serif;
 	}
 	ul { 
 		list-style: none; 
@@ -432,14 +429,14 @@ section#footer {
 	}
 }
 #gototop {
-	width: 40px;
-	height: 40px;
+	width: 2.857em;
+	height: 2.857em;
 	position: fixed;
 	right: 0;
 	bottom: 0;
 	opacity: 0;
-	margin-top: -20px;
-	background: url('up.png') no-repeat 0 -40px;
+	margin-top: -1.429em;
+	background: url('up.png') no-repeat 0 -2.858em;
 	cursor: pointer;
 	&:hover {
 		background-position: 0 0;

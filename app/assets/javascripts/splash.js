@@ -1,3 +1,10 @@
+$(window).ready(function() {
+	window.jumboHeight = $("header").outerHeight();
+	window.jumboWidth = $("header").outerWidth();
+	console.log(window.jumboHeight);
+	console.log(window.jumboWidth);
+	waveStart();
+});
 var renderer;
 var splashScene;
 
@@ -50,7 +57,7 @@ function waveStart()
 
 	aa_test();
 
-	renderer.setSize(window.innerWidth, window.innerHeight);	
+	renderer.setSize(window.jumboWidth, window.jumboHeight);	
 	container.appendChild(renderer.domElement);
 
 	splashScene = new THREE.Scene();
@@ -140,7 +147,7 @@ function aa_test() {
 function loadCamera() {
 	
 	camTarget = new THREE.Mesh(new THREE.Geometry(), blackMaterial);	
-	camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 1, 10000 );
+	camera = new THREE.PerspectiveCamera( 70, window.jumboWidth / window.jumboHeight, 1, 10000 );
 
 	camera.position.x = -338;
 	camera.position.y = -48;
@@ -226,13 +233,15 @@ function onWindowResize() {
 	
 	//playWaves();
   setTimeout(function() {	
-		windowHalfX = window.innerWidth / 2;
-		windowHalfY = window.innerHeight / 2;
+		window.jumboWidth = $("header").outerWidth();
+		window.jumboHeight = $("header").outerHeight();
+		windowHalfX = window.jumboWidth / 2;
+		windowHalfY = window.jumboHeight / 2;
 
-		camera.aspect = window.innerWidth / window.innerHeight;
+		camera.aspect = window.jumboWidth / window.jumboHeight;
 		camera.updateProjectionMatrix();
 
-		renderer.setSize( window.innerWidth, window.innerHeight );
+		renderer.setSize( window.jumboWidth, window.jumboHeight );
 	}, 10);
 }
 
