@@ -1,10 +1,8 @@
-$(window).ready(function() {
+$(window).ready(setTimeout(function() {
 	window.jumboHeight = $("header").outerHeight();
 	window.jumboWidth = $("header").outerWidth();
-	console.log(window.jumboHeight);
-	console.log(window.jumboWidth);
 	waveStart();
-});
+}, 200));
 var renderer;
 var splashScene;
 

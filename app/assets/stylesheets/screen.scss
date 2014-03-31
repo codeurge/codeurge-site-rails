@@ -208,7 +208,9 @@ header {
 			font-family: "RBNo2Light", "Arial", sans-serif;
 			font-size: $h1-size;
 			z-index: 4;
-			color: $light-grey-blue;
+			position: relative;
+			color: $light-orange;
+			text-shadow: 5px 5px 0px $dark-grey, 7px 7px 0px $off-white;
 			text-transform: uppercase;
 		}
 		p.subtext {
