@@ -48,64 +48,64 @@
           .icon.col-md-4
             = image_tag(asset_path("html5.png"), :alt => "HTML5", :id => "html5-icon")
           .progress-meter.col-md-8
-            .meter.red
-              %span{:style => 'width: 100%;'}
-              .caption
-                Skilled
-                %br/
-                %a{:href => '#'} Click To Expand
-      #css3.ability.col-md-4.col-md-offset-2
-        .icon.col-md-4
-          = image_tag(asset_path("css3.png"), :alt => "CSS3", :id => "css3-icon")
-        .progress-meter.col-md-8
-          .meter
-            %span{:style => 'width: 100%;'}
+            .progress.progress-striped.active
+              .progress-bar{:role => 'progressbar', :valuetransitiongoal => "100"}
             .caption
               Skilled
               %br/
               %a{:href => '#'} Click To Expand
+      #css3.ability.col-md-4.col-md-offset-2
+        .icon.col-md-4
+          = image_tag(asset_path("css3.png"), :alt => "CSS3", :id => "css3-icon")
+        .progress-meter.col-md-8
+          .progress.progress-striped.active
+            .progress-bar{:role => 'progressbar', :valuetransitiongoal => "100"}
+          .caption
+            Skilled
+            %br/
+            %a{:href => '#'} Click To Expand
     .languages.row
       #ruby.ability.col-md-4.col-md-offset-1
         .icon.col-md-4
           = image_tag(asset_path("ruby.png"), :alt => "Ruby", :id => "ruby-icon")
         .progress-meter.col-md-8
-          .meter
-            %span{:style => 'width: 50%;'}
-            .caption
-              Fluent
-              %br/
-              %a{:href => '#'} Click To Expand
+          .progress.progress-striped.active
+            .progress-bar{:role => 'progressbar', :valuetransitiongoal => "50"}
+          .caption
+            Fluent
+            %br/
+            %a{:href => '#'} Click To Expand
       #php.ability.col-md-4.col-md-offset-2
         .icon.col-md-4
           = image_tag(asset_path("php.png"), :alt => "PHP", :id => "php-icon")
         .progress-meter.col-md-8
-          .meter
-            %span{:style => 'width: 75%;'}
-            .caption
-              Strong
-              %br/
-              %a{:href => '#'} Click To Expand
+          .progress.progress-striped.active
+            .progress-bar{:role => 'progressbar', :valuetransitiongoal => "75"}
+          .caption
+            Strong
+            %br/
+            %a{:href => '#'} Click To Expand
     .frameworks.row
       #ruby-on-rails.ability.col-md-4.col-md-offset-1
         .icon.col-md-4
           = image_tag(asset_path("rails.png"), :alt => "Ruby on Rails", :id => "rails-icon")
         .progress-meter.col-md-8
-          .meter
-            %span{:style => 'width: 50%;'}
-            .caption
-              Fluent
-              %br/
-              %a{:href => '#'} Click To Expand
+          .progress.progress-striped.active
+            .progress-bar{:role => 'progressbar', :valuetransitiongoal => "50"}
+          .caption
+            Fluent
+            %br/
+            %a{:href => '#'} Click To Expand
       #wordpress.ability.col-md-4.col-md-offset-2
         .icon.col-md-4
           = image_tag(asset_path("wordpress.png"), :alt => "WordPress", :id => "wordpress-icon")
         .progress-meter.col-md-8
-          .meter
-            %span{:style => 'width: 75%;'}
-            .caption
-              Strong
-              %br/
-              %a{:href => '#'} Click To Expand
+          .progress.progress-striped.active
+            .progress-bar{:role => 'progressbar', :valuetransitiongoal => "75"}
+          .caption
+            Strong
+            %br/
+            %a{:href => '#'} Click To Expand
     #other-tools.row
       %ul.row
         %li.col-md-5.col-md-offset-1

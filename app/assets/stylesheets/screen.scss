@@ -94,26 +94,23 @@ body,h1,h2,h3,h4,h5,h6 {
 }
 
 h1 { 
-	font-size: 36px; 
+	font-size: 2.571em;
 }
 
 h2 {
-	font-size: 30px;
+	font-size: 2.143em;
 }
 
 h3 {
-	font-size: 24px;
+	font-size: 1.714em;
 }
 
-h4 {
-	font-size: 18px;
+h4, h6 {
+	font-size: 1.286em;
 }
 
 h5 {
-	font-size: 14px;
-}
-h6 {
-	font-size: 18px;
+	font-size: 1em;
 }
 
 /* Color Palette - Credit to Twilight VIM Theme */
@@ -137,14 +134,21 @@ $off-white: #fffedc;
 $white: #fff;
 $black: #000;
 
+/* Animations */
+.progress, .progress-bar, .two-sec-ease-in-out {
+	-webkit-transition: width 2s ease-in-out;
+	-moz-transition: width 2s ease-in-out;
+	-o-transition: width 2s ease-in-out;
+	transition: width 2s ease-in-out;
+	}
+
 body {
-	font-size: 14px;
 	color: $mid-grey-blue;
 }
 
 body.home header {
 	background-color: $dark-grey;
-	box-shadow:inset 0 0 100px #4162a9;
+	box-shadow:inset 0 0 7.143em #4162a9;
 }
 body.articles header {
 	background: $mid-grey-blue;
@@ -161,10 +165,10 @@ body.contact header {
 $h1-size: 130px;
 header {
 	background: #94592b;
-	margin-bottom: 0px !important;
+	margin-bottom: 0 !important;
 	#logo-extend-left {
 		background: rgba(0,0,0,0.75);
-		height: 130px;
+		height: 9.286em;
 		position: absolute;
 		left: 0;
 		right: 90%;
@@ -172,18 +176,18 @@ header {
 	#logo {
 		background: rgba(0,0,0,0.75);
 		z-index: 4;
-		padding: 20px;
+		padding: 1.429em;
 		position: relative;
 		a {
 			text-indent: -999em;
 			background: url('codeurge.png') no-repeat;
-			height: 57px;
-			width: 190px;
+			height: 4.071em;
+			width: 13.571em;
 			display: block;
 		}
 		p.console {
 			color: $off-white;
-			font-size: 12px;
+			font-size: 0.857em;
 			#prompt-cursor {
 				text-shadow: 0.1em 0.1em 0.2em #fff;
 			}
@@ -205,10 +209,10 @@ header {
 		}
 		p.subtext {
 			color: $white;
-			font: 14px "ClearSans", "Arial", sans-serif;
+			font: 1em "ClearSans", "Arial", sans-serif;
 			background: rgba(0,0,0,0.75);
-			padding: 20px;
-			border-radius: 5px;
+			padding: 1.429em;
+			border-radius: 0.357em;
 			z-index: 2;
 		}
 	}
@@ -223,7 +227,7 @@ canvas {
 	width: 100%;
 	z-index: 1;
 	position: absolute;
-	height: 555px;
+	height: 39.643em;
 }
 
 body p.flash {
@@ -234,8 +238,8 @@ h1.section-title {
 		color: $red;
 		font-family: "ClearSans-Medium", "Arial", sans-serif;
 		text-align: center;
-		font-size: 60px;
-		margin: 40px 0;
+		font-size: 4.286em;
+		margin: 1.857em 0;
 	}
 
 /* Profile Styles */
@@ -245,7 +249,7 @@ section#profile {
 	h5 {
 		font-family: "ClearSans-Thin", "Arial", sans-serif;
 		text-align: center;
-		font-size: 18px;
+		font-size: 1.286em;
 		color: $light-grey;
 		a {
 			color: $violet;
@@ -256,9 +260,9 @@ section#profile {
 		font-family: "ClearSans-Medium", "Arial", sans-serif;
 		font-style: italic;
 		text-align: center;
-		font-size: 14px;
+		font-size: 1em;
 		sup.quotemark {
-			font-size: 100px;
+			font-size: 7.143em;
 			font-family: "ClearSans", "Arial", sans-serif;
 			font-style: italic;
 			color: $light-grey-blue;
@@ -269,22 +273,22 @@ section#profile {
 	a.defense-league {
 		position: absolute;
 		left: 0;
-		margin: 100px 0 0 0;
+		margin: 7.143em 0 0 0;
 	}
 	section#profile-quote {
-		margin: 0 0 50px 0;
+		margin: 0 0 3.571em 0;
 	}
 	#head {
 		text-align: center;
 	}
 	section#short-bio, section#facts { 
 		h1 {
-			font-size: 18px;
+			font-size: 1.286em;
 			color: $green;
 			font-family: "ClearSans-Medium", "Arial", sans-serif;
 		}
 		h2 {
-			font-size: 14px;
+			font-size: 1em;
 			margin: 0;
 			font-weight: bold;
 		}
@@ -294,14 +298,13 @@ section#profile {
 
 section#abilities {
 	background: $white-grey;
-	padding: 35px 0;
+	padding: 2.5em 0;
 	.ability {
 		background: $white;
-		border-radius: 5px;
-		padding: 10px 5px;
-		margin-bottom: 35px;
+		border-radius: 0.357em;
+		padding: 0.714em 0.357em;
+		margin-bottom: 2.5em;
 		text-align: center;
-		height: 100px;
 	}
 }
 
@@ -314,11 +317,11 @@ section#abilities {
 		background: $violet;
 		color: $white;
 		text-transform: uppercase;
-		border-radius: 5px;
-		padding: 10px;
+		border-radius: 0.357em;
+		padding: 0.714em;
 		display: block;
-		margin: 15px auto 0 auto;
-		width: 200px;
+		margin: 1.071em auto 0 auto;
+		width: 14.286em;
 	}
 }
 
@@ -326,131 +329,6 @@ section#abilities {
 #abilities #other-tools .left-tools { text-align: right; }
 #abilities #other-tools .right-tools { text-align: left; }
 
-/* Abilities Meter Styles */
-.meter { 
-			height: 30px;  /* Can be anything */
-			position: relative;
-			background: $grey;
-			-moz-border-radius: 25px;
-			-webkit-border-radius: 25px;
-			border-radius: 25px;
-			-webkit-box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
-			-moz-box-shadow   : inset 0 -1px 1px rgba(255,255,255,0.3);
-			box-shadow        : inset 0 -1px 1px rgba(255,255,255,0.3);
-		}
-		.meter > span {
-			display: block;
-			height: 100%;
-			   -webkit-border-top-right-radius: 8px;
-			-webkit-border-bottom-right-radius: 8px;
-			       -moz-border-radius-topright: 8px;
-			    -moz-border-radius-bottomright: 8px;
-			           border-top-right-radius: 8px;
-			        border-bottom-right-radius: 8px;
-			    -webkit-border-top-left-radius: 20px;
-			 -webkit-border-bottom-left-radius: 20px;
-			        -moz-border-radius-topleft: 20px;
-			     -moz-border-radius-bottomleft: 20px;
-			            border-top-left-radius: 20px;
-			         border-bottom-left-radius: 20px;
-			background-color: rgb(43,194,83);
-			background-image: -webkit-gradient(
-			  linear,
-			  left bottom,
-			  left top,
-			  color-stop(0, rgb(43,194,83)),
-			  color-stop(1, rgb(84,240,84))
-			 );
-			background-image: -moz-linear-gradient(
-			  center bottom,
-			  rgb(43,194,83) 37%,
-			  rgb(84,240,84) 69%
-			 );
-			-webkit-box-shadow: 
-			  inset 0 2px 9px  rgba(255,255,255,0.3),
-			  inset 0 -2px 6px rgba(0,0,0,0.4);
-			-moz-box-shadow: 
-			  inset 0 2px 9px  rgba(255,255,255,0.3),
-			  inset 0 -2px 6px rgba(0,0,0,0.4);
-			box-shadow: 
-			  inset 0 2px 9px  rgba(255,255,255,0.3),
-			  inset 0 -2px 6px rgba(0,0,0,0.4);
-			position: relative;
-			overflow: hidden;
-		}
-		.meter > span:after, .animate > span > span {
-			content: "";
-			position: absolute;
-			top: 0; left: 0; bottom: 0; right: 0;
-			background-image: 
-			   -webkit-gradient(linear, 0 0, 100% 100%, 
-			      color-stop(.25, rgba(255, 255, 255, .2)), 
-			      color-stop(.25, transparent), color-stop(.5, transparent), 
-			      color-stop(.5, rgba(255, 255, 255, .2)), 
-			      color-stop(.75, rgba(255, 255, 255, .2)), 
-			      color-stop(.75, transparent), to(transparent)
-			   );
-			background-image: 
-				-moz-linear-gradient(
-				  -45deg, 
-			      rgba(255, 255, 255, .2) 25%, 
-			      transparent 25%, 
-			      transparent 50%, 
-			      rgba(255, 255, 255, .2) 50%, 
-			      rgba(255, 255, 255, .2) 75%, 
-			      transparent 75%, 
-			      transparent
-			   );
-			z-index: 1;
-			-webkit-background-size: 50px 50px;
-			-moz-background-size: 50px 50px;
-			-webkit-animation: move 2s linear infinite;
-			   -webkit-border-top-right-radius: 8px;
-			-webkit-border-bottom-right-radius: 8px;
-			       -moz-border-radius-topright: 8px;
-			    -moz-border-radius-bottomright: 8px;
-			           border-top-right-radius: 8px;
-			        border-bottom-right-radius: 8px;
-			    -webkit-border-top-left-radius: 20px;
-			 -webkit-border-bottom-left-radius: 20px;
-			        -moz-border-radius-topleft: 20px;
-			     -moz-border-radius-bottomleft: 20px;
-			            border-top-left-radius: 20px;
-			         border-bottom-left-radius: 20px;
-			overflow: hidden;
-		}
-		
-		.animate > span:after {
-			display: none;
-		}
-		
-		@-webkit-keyframes move {
-		    0% {
-		       background-position: 0 0;
-		    }
-		    100% {
-		       background-position: 50px 50px;
-		    }
-		}
-		
-		.orange > span {
-			background-color: #f1a165;
-			background-image: -moz-linear-gradient(top, #f1a165, #f36d0a);
-			background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #f1a165),color-stop(1, #f36d0a));
-			background-image: -webkit-linear-gradient(#f1a165, #f36d0a); 
-		}
-		
-		.red > span {
-			background-color: #f0a3a3;
-			background-image: -moz-linear-gradient(top, #f0a3a3, #f42323);
-			background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #f0a3a3),color-stop(1, #f42323));
-			background-image: -webkit-linear-gradient(#f0a3a3, #f42323);
-		}
-		
-		.nostripes > span > span, .nostripes > span:after {
-			-webkit-animation: none;
-			background-image: none;
-		}
 /* Experience Styles */
 section#experience {
 	background: #fbfbfb;
