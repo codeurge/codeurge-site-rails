@@ -1,13 +1,13 @@
 /* NAVIGATION FUNCTIONS */
 $(function() {
-function applyClickEvent()
-{
+	applyClickEvent();
+	function applyClickEvent() {
 		$('a[href*=#]').click(function(e)
 					{
 						e.preventDefault();
 						if( $( $.attr(this, 'href') ).length > 0 ) {
 							$('html, body').animate({
-								scrollTop: $( $.attr(this, 'href') ).offset().top - 109
+								scrollTop: $( $.attr(this, 'href') ).offset().top
 							}, "slow");
 						}
 						else {
@@ -16,6 +16,17 @@ function applyClickEvent()
 							}, "slow");
 						}
 						return false;
-					});
-}
+		});
+	}
+	$(window).scroll(function() {
+		if(($(window).scrollTop()) > 80){
+			$('#gototop').css({
+				opacity : 1
+			});
+		} else {
+			$('#gototop').css({
+				opacity : 0
+			});
+		}
+	});
 });

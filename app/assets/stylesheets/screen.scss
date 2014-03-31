@@ -113,6 +113,10 @@ h5 {
 	font-size: 1em;
 }
 
+a { 
+	transition: all .3s ease-in-out 0s;
+}
+
 /* Color Palette - Credit to Twilight VIM Theme */
 $grey-blue: #8a9597;
 $light-grey-blue: #a0a8b0;
@@ -322,6 +326,9 @@ section#abilities {
 		display: block;
 		margin: 1.071em auto 0 auto;
 		width: 14.286em;
+		&:hover {
+			background: #938695;
+		}
 	}
 }
 
@@ -388,6 +395,9 @@ section#contact {
 }
 #contact a {
 	color: $light-green;
+	&:hover {
+		color: $green;	
+	}
 }
 
 /* Footer Styles */
@@ -409,6 +419,9 @@ section#footer {
 		padding: 0;
 		li {
 			float: left;
+			a {
+				font-size: 0.714em;
+			}
 		}
 		li:after {
 			content: " | "
@@ -418,7 +431,24 @@ section#footer {
 		}
 	}
 }
-
+#gototop {
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+	margin-top: -20px;
+	background: url('up.png') no-repeat 0 -40px;
+	cursor: pointer;
+	&:hover {
+		background-position: 0 0;
+	}
+}
+.timer-wrapper { 
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
 .hr { display: none; }
 .hr-label { display: none; }
 .min { display: none; }
