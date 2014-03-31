@@ -172,10 +172,15 @@ header {
 	margin-bottom: 0 !important;
 	#logo-extend-left {
 		background: rgba(0,0,0,0.75);
-		height: 9.286em;
+		height: 9.236em;
 		position: absolute;
-		left: 0;
-		right: 90%;
+		left: -999em;
+		right: 100%;
+		z-index: 4;
+		display: block;
+	}
+	#nav-wrapper {
+		position: relative;
 	}
 	#logo {
 		background: rgba(0,0,0,0.75);
@@ -228,7 +233,7 @@ header {
 		font-size: $h1-size * 1.5 !important;
 	}
 }
-canvas {
+#wave, canvas {
 	z-index: 1;
 	position: absolute;
 }
