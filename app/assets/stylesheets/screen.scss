@@ -337,8 +337,6 @@ section#abilities {
 }
 
 #abilities #other-tools ul { list-style: none; }
-#abilities #other-tools .left-tools { text-align: right; }
-#abilities #other-tools .right-tools { text-align: left; }
 
 /* Experience Styles */
 section#experience {
@@ -411,6 +409,11 @@ section#contact {
 			padding: 0 2.5em 0 0;
 		}
 	}
+}
+
+#contact #links {
+	margin: 0;
+	-webkit-padding-start: 0px;
 }
 #contact a {
 	color: $light-green;
