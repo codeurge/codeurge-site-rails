@@ -23,13 +23,13 @@
           - case "#{controller_name} #{(action_name =~ /.*index.*/) ? 'index' : action_name}"
             - when "pages home"
               %li
-                %a{:href => "#profile", :alt => 'Profile'} Profile
+                %a{:href => "#profile", :title => 'Profile'} Profile
               %li
-                %a{:href => "#abilities", :alt => 'Abilities'} Abilities
+                %a{:href => "#abilities", :title => 'Abilities'} Abilities
               %li
-                %a{:href => "#experience", :alt => 'Experience'} Experience
+                %a{:href => "#experience", :title => 'Experience'} Experience
               %li
-                %a{:href => "#contact", :alt => 'Contact'} Contact
+                %a{:href => "#contact", :title => 'Contact'} Contact
               %li
                 = link_to 'Blog', blog_path, class: active_class?(blog_path)
             - else
