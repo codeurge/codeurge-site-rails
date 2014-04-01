@@ -206,6 +206,15 @@ header {
 		z-index: 999;
 		background: transparent !important;
 		border: 0 none !important;
+		margin-top: 30px;
+	}
+	.navbar-fixed-top {
+		background: $dark-grey !important;
+		width: 100%;
+		margin-top: 0;
+	}
+	.navbar-form.navbar-right:last-child {
+		padding: 7px 15px;
 	}
 	section#hero {
 		width: 100%;
