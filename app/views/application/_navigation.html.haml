@@ -20,14 +20,19 @@
           %span.icon-bar
       #navbarCollapse.collapse.navbar-collapse
         %ul.nav.navbar-nav
-          %li
-            %a{:href => "#profile", :alt => 'Profile'} Profile
-          %li
-            %a{:href => "#abilities", :alt => 'Abilities'} Abilities
-          %li
-            %a{:href => "#contact", :alt => 'Contact'} Contact
-          %li
-            = link_to 'Blog', blog_path, class: active_class?(blog_path)
+          - case "#{controller_name} #{(action_name =~ /.*index.*/) ? 'index' : action_name}"
+            - when "pages home"
+              %li
+                %a{:href => "#profile", :alt => 'Profile'} Profile
+              %li
+                %a{:href => "#abilities", :alt => 'Abilities'} Abilities
+              %li
+                %a{:href => "#contact", :alt => 'Contact'} Contact
+              %li
+                = link_to 'Blog', blog_path, class: active_class?(blog_path)
+            - else
+              %li
+                = link_to "Home", root_path
         %aside#auth.navbar-form.navbar-right
           - if logged_in?
             = "Logged in as #{current_user.email}"
