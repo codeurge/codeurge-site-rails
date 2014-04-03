@@ -1,11 +1,14 @@
 !!! 5
 %html
   %head
-    %title= "CodeUrge | " + "#{action_name.capitalize}"
+    %title= "CodeUrge | #{action_name.capitalize} - Full-Stack Web Developer Derek Keith"
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application'
     = favicon_link_tag 'favicon.ico'
     = csrf_meta_tags
+    %meta{:name => 'description', :content => 'CodeUrge - Home of Colorado-based Web Developer Derek Keith is a Full-Stack Developer with over 11 years experience. Crafting successful websites with PHP and Ruby on Rails is my passion, code is my art.'}
+    %meta{":http-equiv" => 'content-type', :content => 'text/html;charset=UTF-8'}
+    %meta{:name => 'keywords', :content => 'codeurge, derek keith, colorado rails developer, colorado php developer, denver rails developer, denver php developer, ruby on rails development, wordpress development, wordpress, ruby, php, rails'}
   %body{ :class => "#{controller_name} #{(action_name =~ /.*index.*/) ? 'index' : action_name}", :"data-spy" => "scroll", :"data-target" => "#nav" }
     #wave
     %header.jumbotron
