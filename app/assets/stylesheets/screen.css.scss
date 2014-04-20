@@ -86,7 +86,7 @@
 @font-face {
   font-family: 'RBNo2Light';
   src: local('RBNo2Light'), local('RBNo2Light'),
-         asset-url('RBNo2Light.otf') format('opentype');
+         font_path('RBNo2Light.otf') format('opentype');
 }
 
 body,h1,h2,h3,h4,h5,h6 {
@@ -189,7 +189,7 @@ header {
 		position: relative;
 		a {
 			text-indent: -999em;
-			background: asset-url('codeurge.png') no-repeat;
+			background: image-url('codeurge.png') no-repeat;
 			height: 4.071em;
 			width: 13.571em;
 			display: block;
