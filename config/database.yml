@@ -21,6 +21,6 @@ production:
   adapter: postgresql
   encoding: unicode
   database: codeurge_production
-  username: codeurge_production_useir
+  username: codeurge_production_user
   password: <%= ENV['POSTGRES_PASSWORD'] %>
   pool: 5
