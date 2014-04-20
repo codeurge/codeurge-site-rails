@@ -4,6 +4,7 @@ development:
   database: codeurge_development
   pool: 5
   username: codeurge_development_user
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -14,11 +15,12 @@ test:
   database: codeurge_test
   pool: 5
   username: codeurge_test_user
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
 
 production:
   adapter: postgresql
   encoding: unicode
   database: codeurge_production
-  username: codeurge_production_user
+  username: codeurge_production_useir
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
   pool: 5
-  timeout: 5000
