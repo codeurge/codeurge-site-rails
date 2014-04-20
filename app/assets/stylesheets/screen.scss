@@ -86,7 +86,7 @@
 @font-face {
   font-family: 'RBNo2Light';
   src: local('RBNo2Light'), local('RBNo2Light'),
-         url('RBNo2Light.otf') format('opentype');
+         asset-url('RBNo2Light.otf') format('opentype');
 }
 
 body,h1,h2,h3,h4,h5,h6 {
@@ -189,7 +189,7 @@ header {
 		position: relative;
 		a {
 			text-indent: -999em;
-			background: url('codeurge.png') no-repeat;
+			background: asset-url('codeurge.png') no-repeat;
 			height: 4.071em;
 			width: 13.571em;
 			display: block;
@@ -399,27 +399,27 @@ section#contact {
 			}
 		}
 		li.linkedin a {
-			background: url('linkedin.png') left center no-repeat;
+			background: asset-url('linkedin.png') left center no-repeat;
 			padding: 0 0 0 2.5em;
 		}
 		li.skype a {
-			background: url('skype.png') left center no-repeat;
+			background: asset-url('skype.png') left center no-repeat;
 			padding: 0 0 0 2.5em;
 		}
 		li.gplus a {
-			background: url('gplus.png') left center no-repeat;
+			background: asset-url('gplus.png') left center no-repeat;
 			padding: 0 0 0 2.5em;
 		}
 		li.twitter a {
-			background: url('twitter.png') right center no-repeat;
+			background: asset-url('twitter.png') right center no-repeat;
 			padding: 0 2.5em 0 0;
 		}
 		li.dribbble a {
-			background: url('dribbble.png') right center no-repeat;
+			background: asset-url('dribbble.png') right center no-repeat;
 			padding: 0 2.5em 0 0;
 		}
 		li.email a {
-			background: url('email.png') right center no-repeat;
+			background: asset-url('email.png') right center no-repeat;
 			padding: 0 2.5em 0 0;
 		}
 	}
@@ -441,7 +441,7 @@ section#footer {
 	background: $dark-grey;
 	color: $mid-grey-blue;
 	aside#footer-logo {
-		background: url('codeurge.png') no-repeat;
+		background: asset-url('codeurge.png') no-repeat;
 		width: 13.571em;
 		height: 4.071em;
 		display: block;
@@ -480,7 +480,7 @@ section#footer {
 	bottom: 0;
 	opacity: 0;
 	margin-top: -1.429em;
-	background: url('up.png') no-repeat 0 -2.858em;
+	background: asset-url('up.png') no-repeat 0 -2.858em;
 	cursor: pointer;
 	&:hover {
 		background-position: 0 0;
