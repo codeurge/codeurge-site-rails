@@ -85,8 +85,9 @@
 }
 @font-face {
   font-family: 'RBNo2Light';
-  src: local('RBNo2Light'), local('RBNo2Light'),
-         font_path('RBNo2Light.otf') format('opentype');
+  src: font_path('RBNo2Light.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
 }
 
 body,h1,h2,h3,h4,h5,h6 {
