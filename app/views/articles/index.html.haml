@@ -5,7 +5,7 @@
         %h2
           = link_to article.title, article_path(article)
         %article
-          = article.body
+          = truncate(article.body, length: 350, omission: '...')
         %section
           %p 
             Posted by
