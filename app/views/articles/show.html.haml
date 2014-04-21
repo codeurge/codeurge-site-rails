@@ -1,21 +1,24 @@
-%p
-  Tags:
-  - @article.tags.each do |tag|
-    = link_to tag.name, tag_path(tag)
-%p
-  Categories:
-  - @article.categories.each do |category|
-    = link_to category.name, category_path(category)
-%p= @article.author.username
-- unless @article.image.url(:medium).include? "missing"
-  %p= @article.image.url(:medium)
-  %p= image_tag @article.image.url(:medium)
-%p= @article.body.html_safe
-= render partial: 'comments/form'
-= link_to "<< Back to Articles List", articles_path
-%h3
-  Comments (#{@article.comments.size})
-= render partial: 'articles/comment', collection: @article.comments
-- if logged_in?
-  = link_to "delete", article_path(@article), method: :delete
-  = link_to "edit", edit_article_path(@article)
+%section#article.col-md-8
+  %h1= @article.title
+  - unless @article.image.url(:medium).include? "missing"
+    %p= @article.image.url(:medium)
+    %p= image_tag @article.image.url(:medium)
+  %p= @article.body.html_safe
+  %p
+    Tags:
+    - @article.tags.each do |tag|
+      = link_to tag.name, tag_path(tag)
+  %p
+    Categories:
+    - @article.categories.each do |category|
+      = link_to category.name, category_path(category)
+  %p= @article.author.username
+ 
+  = render partial: 'comments/form'
+  = link_to "<< Back to Articles List", articles_path
+  %h3
+    Comments (#{@article.comments.size})
+  = render partial: 'articles/comment', collection: @article.comments
+  - if logged_in?
+    = link_to "delete", article_path(@article), method: :delete
+    = link_to "edit", edit_article_path(@article)

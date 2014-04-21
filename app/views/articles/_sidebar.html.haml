@@ -1,3 +1,6 @@
-%section#sidebar
+%section#sidebar.col-md-4
   %h1 Sidebar
   %h1 Categories
+  %ul
+    - @categories.each do |category|
+      %li= link_to category.name, category_path(category)

@@ -1,10 +1,16 @@
-%h1 All Articles
-%ul#articles
-  - @articles.each do |article|
-    %li
-      = link_to article.title, article_path(article)
-      = article.body
-      = article.author.username
-      = article.created_at
-- if logged_in?
-  = link_to "Create a New Article", new_article_path, class: 'new_article'
+%section#articles.col-md-8
+  %ul#articles
+    - @articles.each do |article|
+      %li
+        %h2
+          = link_to article.title, article_path(article)
+        %article
+          = article.body
+        %section
+          %p 
+            Posted by
+            = article.author.username
+            Posted on:
+            = article.created_at.strftime("%d %b %y")
+  - if logged_in?
+    = link_to "Create a New Article", new_article_path, class: 'new_article'

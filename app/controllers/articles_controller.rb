@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
 	include ArticlesHelper
 
 	def index
-		@articles = Article.all
+		@articles = Article.all.limit(10).reorder('created_at DESC')
 	end
 
 	def show
@@ -49,4 +49,8 @@ class ArticlesController < ApplicationController
 
 	private
 		before_filter :require_login, except: [:index, :show]
+		before_filter :all_categories
+		def all_categories
+			@categories = Category.all
+		end
 end
