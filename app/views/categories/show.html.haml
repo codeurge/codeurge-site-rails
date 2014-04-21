@@ -1,0 +1,4 @@
+%h1 Articles with #{@category.name}
+%ul
+  - @category.articles.each do |article|
+    %li= link_to article.title, article_path(article)

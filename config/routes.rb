@@ -4,6 +4,7 @@ Codeurge::Application.routes.draw do
 		resources :comments
 	end
 	resources :tags
+	resources :categories
 	resources :authors
 
 	resources :author_sessions, only: [ :new, :create, :destroy ]
@@ -13,8 +14,4 @@ Codeurge::Application.routes.draw do
 
 	get '/home' => 'pages#home'
 	get '/blog' => 'articles#index'
-	get '/about' => 'pages#about'
-	get '/services' => 'pages#services'
-	get '/contact' => 'pages#contact'
-	get '/examples/ch2' => 'examples#ch2'
 end
