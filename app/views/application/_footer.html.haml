@@ -1,0 +1,67 @@
+%section#contact
+  .container
+    %h1.section-title Contact
+    %h2.text-center For Hire?
+    %p.col-md-8.col-md-offset-2
+      I am currently seeking full-time employment with a web development firm. My passion has always been in web development; Working with great minds challenges me to do even better. I have strength and experience in WordPress, and always seek opportunities to work more with Rails.
+    .clearfix
+    %h3#links-header.text-center
+      Interested? Drop me a line!
+    %ul#links
+      %li.linkedin.col-xs-6.col-sm-6.col-md-4.col-md-offset-1
+        %a{:href => 'http://linkedin.com/in/derekkeith', :target => '_blank'} in/derekkeith
+      %li.email.col-xs-6.col-sm-6.col-md-4.col-md-offset-2
+        %a.text-right{:href => 'mailto:hello@codeurge.com'} hello@codeurge.com
+      %li.skype.col-xs-6.col-sm-6.col-md-4.col-md-offset-1
+        %a{:href => 'skype:CodeUrge?chat'} CodeUrge
+      %li.twitter.col-xs-6.col-sm-6.col-md-4.col-md-offset-2
+        %a.text-right{:href => 'http://twitter.com/codeurge', :target => '_blank'} CodeUrge
+      %li.gplus.col-xs-6.col-sm-6.col-md-4.col-md-offset-1
+        %a{:href => 'https://plus.google.com/u/0/b/110588382351412346911/110588382351412346911/posts', :target => '_blank'} CodeUrge
+      %li.dribbble.col-xs-6.col-sm-6.col-md-4.col-md-offset-2
+        %a.text-right{:href => 'http://dribbble.com/codeurge', :target => '_blank'} CodeUrge
+    %div.col-md-4.col-md-offset-4.timer-wrapper
+      %p
+        Since you arrived at this page
+        %span.timer
+        %br/
+        Voyager 1 has traveled
+        %span.mileage
+        miles at a rate of 3.6AU/year or 38,200 mph.
+%section#footer
+  .container
+    %section.col-md-3.col-md-offset-1
+      %p 
+        %a{:href => 'http://unlicense.org', :target => "_blank"} Unlicense
+    %section.col-md-3.col-md-offset-4 
+      %a#gototop{:href => '#top'}
+      #socialize
+        .fb-like{"data-href" => "https://developers.facebook.com/docs/plugins/", "data-layout" => "button_count", "data-action" => "like", "data-show-faces" => "false", "data-share" => "false"}
+%script#oceanSurfaceVert{:type => "x-shader/x-vertex"}
+  varying vec3 v_objCoor;
+  void main() {
+  v_objCoor = position;
+  gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+  }
+%script#oceanSurfaceFrag{:type => "x-shader/x-fragment"}
+  uniform vec3 u_color;
+  varying vec3 v_objCoor;
+
+  float remap (float value, float initStart, float initEnd, float finalStart, float finalEnd)
+  {
+  float mapped = (( (value - initStart) *(finalEnd - finalStart) ) / (initEnd- initStart)) + finalStart;
+  return mapped;
+  }
+
+  void main() {
+  vec3 cameraPos = vec3(-338.0, -48.0, 2000.0);
+  float border = -100.0;
+
+  float alpha = remap(v_objCoor.y+border, 0.0, cameraPos.z*3.0, 0.0, 1.0);
+  float red = remap(v_objCoor.z, -500.0, 500.0, 0.8, 1.0);
+  float green = remap(v_objCoor.z, -500.0, 500.0, 0.8, 1.0);
+  
+  gl_FragColor=vec4(red, green,248.0/256.0, alpha);
+    
+    
+  }

@@ -1,0 +1,21 @@
+%script{:src => "//brandfolder.com/api/beta/widgets.js?brand=codeurge&widgets=logos,images,people"}
+= render partial: "header"
+#wave
+%header.jumbotron
+  = render partial: "navigation"
+%section#articles.container
+  %main
+    - case "#{controller_name} #{(action_name =~ /.*index.*/) ? 'index' : action_name}"
+      - when 'pages home'
+        %h1.text-center Full-Stack
+        %p.subtext.text-center.col-xs-12.col-sm-12.col-md-12.col-lg-8.col-lg-offset-2
+          With over 11 years experience throughout the industry, I leverage the full stack of technologies of the internet to create successful online experiences. My clients prefer to work with me because I am passionate about my work and offer much more than code at will.
+      - when 'articles index'
+        %h1.text-center Blog
+      - when 'articles show'
+        %h1= @article.title
+      - else
+    %p.flash
+      = flash.notice
+    = yield
+= render partial: "footer"
