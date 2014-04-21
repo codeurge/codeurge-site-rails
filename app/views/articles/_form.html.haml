@@ -15,6 +15,10 @@
     %br/
     = f.text_field :tag_list
   %p
+    = f.label :category_list
+    %br/
+    = f.text_field :category_list
+  %p
     - if @article.image.exists?
       = image_tag @article.image.url
       %br/

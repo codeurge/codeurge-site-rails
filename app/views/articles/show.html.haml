@@ -3,6 +3,10 @@
   Tags:
   - @article.tags.each do |tag|
     = link_to tag.name, tag_path(tag)
+%p
+  Categories:
+  - @article.categories.each do |category|
+    = category.name
 %p= @article.author.username
 %p= image_tag @article.image.url(:medium)
 %p= @article.body.html_safe
