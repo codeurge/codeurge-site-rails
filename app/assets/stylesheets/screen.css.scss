@@ -389,36 +389,44 @@ section#contact {
 		font-weight: bold;
 		line-height: 1.571em;
 	}
-	ul { 
+	ul#links { 
 		list-style: none; 
 		li { 
 			margin-bottom: 0.714em; 
 			a {
 				display: block;
+				height: 18px;
+				&:hover {
+					background-position: 0 bottom !important;
+					padding: 0 0 0 2.3em;
+				}
+				&.text-right:hover {
+					background-position: right bottom !important;
+				}
 			}
 		}
 		li.linkedin a {
-			background: asset-url('linkedin.png') left center no-repeat;
+			background: asset-url('linkedin.png') left top no-repeat;
 			padding: 0 0 0 2.5em;
 		}
-		li.skype a {
-			background: asset-url('skype.png') left center no-repeat;
+		li.brandfolder a {
+			background: asset-url('brandfolder.png') left top no-repeat;
 			padding: 0 0 0 2.5em;
 		}
 		li.gplus a {
-			background: asset-url('gplus.png') left center no-repeat;
+			background: asset-url('gplus.png') left top no-repeat;
 			padding: 0 0 0 2.5em;
 		}
 		li.twitter a {
-			background: asset-url('twitter.png') right center no-repeat;
+			background: asset-url('twitter.png') right top no-repeat;
 			padding: 0 2.5em 0 0;
 		}
 		li.dribbble a {
-			background: asset-url('dribbble.png') right center no-repeat;
+			background: asset-url('dribbble.png') right top no-repeat;
 			padding: 0 2.5em 0 0;
 		}
 		li.email a {
-			background: asset-url('email.png') right center no-repeat;
+			background: asset-url('email.png') right top no-repeat;
 			padding: 0 2.5em 0 0;
 		}
 	}
