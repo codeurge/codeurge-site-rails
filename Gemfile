@@ -30,18 +30,31 @@ gem 'sorcery'
 
 gem 'haml-rails'
 
+gem 'slim-rails'
+
 gem 'bootstrap-sass'
+
+gem 'rspec-rails', :group => [:test, :development]
+
+group :development do
+	gem 'childprocess', '0.3.6'
+  gem 'spork-rails'
+	gem 'guard'
+	gem 'guard-rspec'
+	gem 'guard-spork'
+	gem 'guard-livereload'
+end
+
+group :test do
+	gem 'capybara'
+	gem 'factory_girl'
+	gem 'factory_girl_rails'
+end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
-
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Use unicorn as the app server
-# gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
