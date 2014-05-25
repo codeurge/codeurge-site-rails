@@ -3,7 +3,7 @@
   - unless @article.image.url(:medium).include? "missing"
     %p= @article.image.url(:medium)
     %p= image_tag @article.image.url(:medium)
-  %p= @article.body.html_safe
+  %p= @article.body
   %p
     Tags:
     - @article.tags.each do |tag|
