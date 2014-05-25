@@ -1,0 +1,275 @@
+section#profile
+  section.container
+    a.defense-league.hidden-xs  href="http://internetdefenseleague.org" target="_blank" 
+      img  src="http://internetdefenseleague.org/images/badges/final/banner_left.png" alt=("Member of The Internet Defense League") 
+    h1.section-title Profile
+    h5
+      | I'm Derek Keith, a Colorado-based full-stack developer
+      a href='#contact'  available for freelance contracts
+      | .
+    section#profile-quote
+      h6
+        sup.quotemark &ldquo;
+        | I picked up an old HTML book in 2003, and I knew it instantly - this is addiction.
+    section#short-bio.col-sm-3.col-md-3.col-md-offset-1
+      h1 short bio
+      p
+        | I'm an all-around computer enthusiast, developer, and systems administrator.
+        |  I knew at an early age that the internet was going to an important part of the future of humanity and that
+        |  I absolutely had to be a part of it.
+      p
+        | Have you ever dreamed in code that you didn't quote finish the evening before?
+      p
+        | This is CodeUrge.
+        br
+        | This is my addiction.
+    section#head.hidden-xs.col-sm-3.col-sm-offset-1.col-md-4.col-md-offset-0
+      = image_tag(asset_path("headshot.png"), :alt => "Derek Keith | Colorado-Based Full-Stack Web Developer", :class => "headshot")
+    section#facts.col-sm-3.col-sm-offset-2.col-md-3.col-md-offset-1
+      h1 facts
+      h2 Name:
+      p Derek Keith
+      h2 Age:
+      p 25
+      h2 Location:
+      p Denver, Colorado
+      h2 Favorite Languages:
+      p Ruby & PHP
+      h2 Favorite Frameworks:
+      p Rails, Sinatra & CakePHP
+      h2 Favorite CMS:
+      p WordPress, ExpressionEngine
+section#abilities
+  .abilities.container
+    .row
+      h1.section-title Abilities
+      #html5.ability.col-md-4.col-md-offset-1
+        .icon.col-md-4
+          = image_tag(asset_path("html5.png"), :alt => "HTML5", :id => "html5-icon")
+        .progress-meter.col-md-8
+          .progress.progress-striped.active
+            .progress-bar role='progressbar' valuetransitiongoal="100" 
+          .caption
+            | Skilled
+      #css3.ability.col-md-4.col-md-offset-2
+        .icon.col-md-4
+          = image_tag(asset_path("css3.png"), :alt => "CSS3", :id => "css3-icon")
+        .progress-meter.col-md-8
+          .progress.progress-striped.active
+            .progress-bar role='progressbar' valuetransitiongoal="100" 
+          .caption
+            | Skilled
+    .languages.row
+      #ruby.ability.col-md-4.col-md-offset-1
+        .icon.col-md-4
+          = image_tag(asset_path("ruby.png"), :alt => "Ruby", :id => "ruby-icon")
+        .progress-meter.col-md-8
+          .progress.progress-striped.active
+            .progress-bar role='progressbar' valuetransitiongoal="50" 
+          .caption
+            | Fluent
+      #php.ability.col-md-4.col-md-offset-2
+        .icon.col-md-4
+          = image_tag(asset_path("php.png"), :alt => "PHP", :id => "php-icon")
+        .progress-meter.col-md-8
+          .progress.progress-striped.active
+            .progress-bar role='progressbar' valuetransitiongoal="75" 
+          .caption
+            | Strong
+    .frameworks.row
+      #ruby-on-rails.ability.col-md-4.col-md-offset-1
+        .icon.col-md-4
+          = image_tag(asset_path("rails.png"), :alt => "Ruby on Rails", :id => "rails-icon")
+        .progress-meter.col-md-8
+          .progress.progress-striped.active
+            .progress-bar role='progressbar' valuetransitiongoal="50" 
+          .caption
+            | Fluent
+      #wordpress.ability.col-md-4.col-md-offset-2
+        .icon.col-md-4
+          = image_tag(asset_path("wordpress.png"), :alt => "WordPress", :id => "wordpress-icon")
+        .progress-meter.col-md-8
+          .progress.progress-striped.active
+            .progress-bar role='progressbar' valuetransitiongoal="75" 
+          .caption
+            | Strong
+    #other-tools.row
+      ul
+        li.col-xs-5.col-sm-5.col-sm-offset-1.col-md-5.col-md-offset-1
+          ul.col-md-5.text-right
+            li
+              | WebGL
+              .dots-5
+            li
+              | jQuery
+              .dots-5
+            li
+              | CoffeeScript
+              .dots-5
+            li
+              | Bootstrap
+              .dots-5
+            li
+              | LESS
+              .dots-5
+            li
+              | MySQL 4 & 5
+              .dots-5
+            li
+              | SQLite 3
+              .dots-5
+            li
+              | Version Control (git)
+              .dots-5
+            li
+              | MVC Pattern
+              .dots-5
+            li
+              | OO Programming
+              .dots-5
+            li
+              | Command Line
+              .dots-5
+        li.col-xs-5.col-sm-5.col-md-5.col-md-offset-1
+          ul.col-md-5
+            li
+              | Apache 2
+              .dots-5
+            li
+              | Nginx
+              .dots-5
+            li
+              | Passenger
+              .dots-5
+            li
+              | VMWare ESXi
+              .dots-5
+            li
+              | Virtuozzo
+              .dots-5
+            li
+              | tmux
+              .dots-5
+            li
+              | vim
+              .dots-5
+            li
+              | homebrew
+              .dots-5
+            li
+              | capistrano
+              .dots-5
+    #github.col-md-12
+      p This project is built on Rails 4.1.0
+      a href='http://github.com/codeurge/codeurge-site' target='_blank'  View source on Github
+section#experience
+  #employment-history.container
+    h1.section-title Experience
+    section#resume
+      p.col-md-12.text-center
+        a href='/resume.pdf' title=('PDF Resume')  PDF Resume
+    article#brandfolder
+      .entry-title.col-md-2.col-md-offset-1
+        h1 Brandfolder
+        p 2014 - The moon!
+      .entry-content.col-md-7.col-md-offset-1
+        h2 Ruby on Rails Developer
+        p
+          | At Brandfolder I focus on extending the application's most requested features voted
+          |  for by the users. I enjoy focusing on a core SaaS product that I truly believed from
+          |  the moment I heard about it, was going to change brand asset sharing forever.
+        p
+          | URL:
+          a href='http://brandfolder.com?ref=codeurge' target="_blank"  http://brandfolder.com
+          | | Denver, Colorado
+    article#handy-networks
+      .entry-title.col-md-2.col-md-offset-1
+        h1 Handy Networks
+        p 2013 - 2014
+      .entry-content.col-md-7.col-md-offset-1
+        h2 Support Team - Shift Leader
+        p
+          | Assisted customers with hosting plans in a data center environment.
+          | Primary responsibilities were to meet support ticket SLA goals, assist team members with issues
+          | as needed, and phone support with direct customers, and end-users.
+        p
+          | URL:
+          a href='http://handynetworks.com' target="_blank"  http://handynetworks.com
+          | | Denver, Colorado
+    article#requiredev
+      .entry-title.col-md-2.col-md-offset-1
+        h1 Require(dev)
+        p 2012 - 2013
+      .entry-content.col-md-7.col-md-offset-1
+        h2 Co-Founder, Sr. Developer
+        p
+          | As a Co-Founder of this development outsourcing company my hands were in several roles
+          | including, but not limited to web development, accounting, project management, contract
+          | drafting, and management of internal systems and infrastructure.
+        p
+          | URL:
+          a href='#'  Site Offline
+          | | Denver, Colorado
+    article#godaddy
+      .entry-title.col-md-2.col-md-offset-1
+        h1 GoDaddy.com
+        p 2011 - 2012
+      .entry-content.col-md-7.col-md-offset-1
+        h2 Linux Systems Administrator
+        p
+          | GoDaddy.com expressed an interest in my mix of administration skills with programming
+          | background. Primary responsibilities were to fix failed automation events within the
+          | hosting environment, to identify and resolve widespread issues as quickly as possible,
+          | and provide outstanding customer service.
+        p
+          | URL:
+          a href='http://godaddy.com' target='_blank'  http://godaddy.com
+          | | Denver, Colorado
+    article#latisys
+      .entry-title.col-md-2.col-md-offset-1
+        h1 Latisys
+        p 2009 - 2011
+      .entry-content.col-md-7.col-md-offset-1
+        h2 Systems Engineer
+        p
+          | Hired as NOC Technician, later promoted to Systems Engineer in response to individual
+          | interest in assisting with advanced tasks; including provisioning of new server orders,
+          | VMWare ESXi provisioning (including clustering and failover configuration), assisting with
+          | Cisco hardware rules and ASA/ACE firewall configuration in a data center envrionment.
+        p
+          | URL:
+          a href='http://latisys.com' target='_blank'  http://latisys.com
+          | | Englewood, Colorado
+    article#Lawgical
+      .entry-title.col-md-2.col-md-offset-1
+        h1 Lawgical
+        p 2007 - 2009
+      .entry-content.col-md-7.col-md-offset-1
+        h2 Web Developer
+        p
+          | Assisted as part of a development team that builds online tools for use within the legal
+          | industry. Developed mostly in Ruby on Rails, HAML/SASS, Compass, and other related
+          | technology. Side projects for clients would include a good deal of WordPress theming
+          | and plugin customization.
+        p
+          | URL:
+          a href='http://lawgical.com' target='_blank'  http://lawgical.com
+          | | Denver, Colorado
+    article#dbsinteractive
+      .entry-title.col-md-2.col-md-offset-1
+        h1 DBS>Interactive
+        p 2006 - 2007
+      .entry-content.col-md-7.col-md-offset-1
+        h2 Web Developer
+        p
+          | Designed websites from scratch using Photoshop to be implemented into whichever platform was to be used for the client's website. When appropriate, I would go above my expectations as a web designer by coding WordPress themes to allow developers to focus more challenging tasks.
+        p
+          | URL:
+          a href='http://dbsinteractive.com' target='_blank'  http://dbsinteractive.com
+          | | Louisville, KY
+section#blog
+  section#articles.container
+    - @articles.each do |article|
+      article.col-md-6
+        h1= article.title
+        p= article.body
