@@ -269,7 +269,11 @@ section#experience
           | | Louisville, KY
 section#blog
   section#articles.container
+    h1.section-title From The Blog
+    p.col-md-12.text-center
+      = link_to "See more posts", articles_path
     - @articles.each do |article|
       article.col-md-6
-        h1= article.title
+        = link_to image_tag(article.image, :border => 0), article_path(article)
+        h1= link_to article.title, article_path(article)
         p= article.body
