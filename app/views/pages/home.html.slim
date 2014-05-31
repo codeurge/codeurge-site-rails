@@ -260,6 +260,9 @@ section#blog
       = link_to "See more posts", articles_path
     - @articles.each do |article|
       article.col-md-6
-        = link_to image_tag(article.image, :border => 0), article_path(article)
+        - if article.image?
+          = link_to image_tag(article.image, :border => 0), article_path(article)
         h1= link_to article.title, article_path(article)
         p= article.body
+        p= link_to "Read full post", article_path(article)
+        span= "Posted: " + article.created_at.to_formatted_s(:long) + ", By: " + article.author.username.to_s

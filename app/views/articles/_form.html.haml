@@ -19,6 +19,10 @@
     %br/
     = f.text_field :category_list
   %p
+    = f.label :published
+    %br/
+    = f.check_box :published
+  %p
     - if @article.image.exists?
       = image_tag @article.image.url
       %br/
