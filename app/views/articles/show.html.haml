@@ -1,7 +1,6 @@
 %section#article.col-md-8
   %h1= @article.title
   - unless @article.image.url(:medium).include? "missing"
-    %p= @article.image.url(:medium)
     %p= image_tag @article.image.url(:medium)
   %p= @article.body.html_safe
   %p
