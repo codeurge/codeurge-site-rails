@@ -14,5 +14,10 @@
             = article.author.username
             Posted on:
             = article.created_at.strftime("%d %b %y")
+        - if logged_in?
+          %span
+            = article.published ? "Published" : "Private"
+            = link_to "delete", article_path(article), method: :delete
+            = link_to "edit", edit_article_path(article)
   - if logged_in?
     = link_to "Create a New Article", new_article_path, class: 'new_article'
