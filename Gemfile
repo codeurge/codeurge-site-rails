@@ -24,15 +24,17 @@ gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-gem 'paperclip'
+gem 'paperclip' # file attachments
 
-gem 'sorcery'
+gem 'sorcery' # magical authentication
 
-gem 'haml-rails'
+gem 'haml-rails' # still using HAML in some places.
 
-gem 'slim-rails'
+gem 'slim-rails' # slim templates, faster than HAML
 
-gem 'bootstrap-sass'
+gem 'bootstrap-sass' # for bootstrap
+
+gem "recaptcha", :require => "recaptcha/rails" # reCaptcha for Article comments
 
 gem 'rspec-rails', :group => [:test, :development]
 
