@@ -2,6 +2,8 @@
   %ul#articles
     - @articles.each do |article|
       %li
+        - if article.image?
+          = link_to image_tag(article.image, :border => 0), article_path(article) 
         %h2
           = link_to article.title, article_path(article)
         %article
