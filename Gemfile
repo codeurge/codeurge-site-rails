@@ -50,6 +50,11 @@ group :development do
 	gem 'guard-livereload'
   gem 'rspec-legacy_formatters'
   gem 'fuubar'
+  gem 'capistrano'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rvm'
+  gem 'capistrano-rails'
+  gem 'capistrano-ext'
 end
 
 group :test do

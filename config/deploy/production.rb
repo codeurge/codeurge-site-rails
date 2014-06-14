@@ -4,9 +4,9 @@
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
 # Don't declare `role :all`, it's a meta role
-role :app, %w{git@codeurge.com}
-role :web, %w{git@codeurge.com}
-role :db,  %w{git@codeurge.com}
+role :app, %w{derek@codeurge.com}
+role :web, %w{derek@codeurge.com}
+role :db,  %w{derek@codeurge.com}
 
 # Extended Server Syntax
 # ======================
@@ -14,7 +14,9 @@ role :db,  %w{git@codeurge.com}
 # definition into the server list. The second argument
 # something that quacks like a hash can be used to set
 # extended properties on the server.
-server 'beta.codeurge.com', user: 'git', roles: %w{web db app}
+server 'codeurge.com', user: 'derek', roles: %w{web db app}
+
+set :rvm_ruby_version, '2.1.1'
 
 # you can set custom ssh options
 # it's possible to pass any option but you need to keep in mind that net/ssh understand limited list of options
