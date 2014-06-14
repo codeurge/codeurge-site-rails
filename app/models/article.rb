@@ -12,6 +12,9 @@ class Article < ActiveRecord::Base
 	validates_attachment_content_type :image, :content_type => %w(image/jpeg image/jpg image/png)
 
 	validates :author_id, presence: true
+  validates :title, presence: true
+  validates :body, presence: true
+  validates :created_at, presence: true
 
 	def tag_list
 	  self.tags.collect do |tag|
