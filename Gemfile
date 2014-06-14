@@ -36,7 +36,10 @@ gem 'bootstrap-sass' # for bootstrap
 
 gem "recaptcha", :require => "recaptcha/rails" # reCaptcha for Article comments
 
-gem 'rspec-rails', :group => [:test, :development]
+group :test, :development do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+end
 
 group :development do
 	gem 'childprocess', '0.3.6'
@@ -45,12 +48,13 @@ group :development do
 	gem 'guard-rspec'
 	gem 'guard-spork'
 	gem 'guard-livereload'
+  gem 'rspec-legacy_formatters'
+  gem 'fuubar'
 end
 
 group :test do
+  gem 'faker'
 	gem 'capybara'
-	gem 'factory_girl'
-	gem 'factory_girl_rails'
 end
 
 group :doc do
